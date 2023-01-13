@@ -7,18 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './defaultMod/header/header.component';
 import { NavbarComponent } from './defaultMod/navbar/navbar.component';
 import { FooterComponent } from './defaultMod/footer/footer.component';
-import { DefautcomponentComponent } from './defautcomponent/defautcomponent.component';
+
+import { DefaultModModule } from './default-mod/default-mod.module';
+import { HomeComComponent } from './Navigationbar/home-com/home-com.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefautcomponentComponent,
+    
+    
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DefaultModModule
   ],
   providers: [],
   bootstrap: [AppComponent]

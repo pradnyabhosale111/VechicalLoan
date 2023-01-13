@@ -15,13 +15,27 @@ import {MatInputModule} from '@angular/material/input';
 import { MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
+import { DefautcomponentComponent } from '../defautcomponent/defautcomponent.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { EmiCalculatorComponent } from '../Navigationbar/emi-calculator/emi-calculator.component';
+import { AboutUsComponent } from '../Navigationbar/about-us/about-us.component';
+import { LoanEnquiryComponent } from '../Navigationbar/loan-enquiry/loan-enquiry.component';
+import { SignInComponent } from '../Navigationbar/sign-in/sign-in.component';
+import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
 @NgModule({
   declarations: [
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DefautcomponentComponent,
+    HomeComComponent,
+    EmiCalculatorComponent,
+    LoanEnquiryComponent,
+    AboutUsComponent,
+    SignInComponent
   ],
   imports: [
+    AppRoutingModule,
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
@@ -30,13 +44,21 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatTableModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    DefaultModRoutingModule,
+  
   
   ],
   exports:[
     HeaderComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DefautcomponentComponent,
+    HomeComComponent,
+    EmiCalculatorComponent,
+    LoanEnquiryComponent,
+    AboutUsComponent,
+    SignInComponent
   ]
 })
 export class DefaultModModule { }
