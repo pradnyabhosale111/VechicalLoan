@@ -1,52 +1,65 @@
+<h1 align="center">Enquiry Form</h1>
+<div class="container" #container>
 
 
-<h1>Loan Enquiry form</h1>
-<form [formGroup]="enquiryForm" (ngSubmit)="customerEnquiry()">
-    
-        <!-- customerid auto generation  -->
-        <!-- customerEnquiryStatus  is hradcode in .ts file -->
-    <div class="form-group">
-      <label class="text-uppercase">FirstName :</label>
-      <input type="text" formControlName="customerFirstname" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+  
+ <div class="form-container sign-in-container">
+  
+          <form action="#" [formGroup]="enquiryForm" (ngSubmit)="customerEnquiry()">
+          
+           <div>
+           
+            <input type="text" placeholder="Enter First Name" formControlName="customerFirstname" />
+            <input type="text" placeholder="Enter Middle Name" formControlName="customerMiddlename" />
+            <input type="text" placeholder="Enter Last Name" formControlName="customerLastname" />
+            <input type="text" placeholder="Enter Date Of Birth" formControlName="customerDateOfBirth" />
+            <input type="text" placeholder="Enter Email" formControlName="customerEmail" />
+            <input type="text" placeholder="Enter Mobile Number" formControlName="customerMobileNumber" />
+            <input type="text" placeholder="Enter Pancard Number" formControlName="customerPancardNumber" />
+          
+            
+            <input type="text" placeholder="Enter Status" formControlName="customerEnquiryStatus" />
+           
+            <button>Submit Enquiry</button>
+          </div>
+          </form>
+        </div> 
+      
+
+      <div class="form-container sign-in-container">
+      
+          
+          <div class="social-container">
+          
+          </div>
+       
+       
+     
+       
+        </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+           
+          </div>
+          
+          <div class="overlay-panel overlay-right">
+          
+         
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-        <label class="text-uppercase">MiddleName:</label>
-        <input type="text" formControlName="customerMiddlename" placeholder="firstname"><!-- [(ngModel)]=u.username-->
-      </div>
 
-    <div class="form-group">
-        <label class="text-uppercase">LastName :</label>
-        <input type="text" formControlName="customerLastname" placeholder="Enter LastName"><!-- [(ngModel)]=u.username-->
-      </div>
-
-    <div class="form-group">
-        <label  class="text-uppercase">Date-of-Birth :</label>
-        <input type="text" formControlName="customerDateOfBirth" placeholder="Enter Date-of-Birth.."><!-- [(ngModel)]=u.username-->
-      </div>
-
-      <div class="form-group">
-        <label  class="text-uppercase">Email :</label>
-        <input type="text" formControlName="customerEmail" placeholder="Enter Email Address"><!-- [(ngModel)]=u.username-->
-      </div>
-
-      <div class="form-group">
-        <label  class="text-uppercase">MobileNumber :</label>
-        <input type="text" formControlName="customerMobileNumber" placeholder="Enter the Mobile number"><!-- [(ngModel)]=u.username-->
-      </div>
-
-      <div class="form-group">
-        <label  class="text-uppercase">Pancard :</label>
-        <input type="text" formControlName="customerPancardNumber" placeholder="Enter the pancard number"><!-- [(ngModel)]=u.username-->
-      </div>
-
-
-      <div class="form-check">
-        <button type="submit" class="btn btn-login float-right">Submit Enquiry</button>
-        <!--</button>(click)="login(u)">Submit</button>-->
-      </div>
-
-      </form>
+   
+      
+           
+    
+ 
+   
+      
+      
 
     
 
