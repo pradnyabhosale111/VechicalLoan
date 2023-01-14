@@ -11,10 +11,12 @@ import { FooterComponent } from './defaultMod/footer/footer.component';
 import { DefaultModModule } from './default-mod/default-mod.module';
 import { HomeComComponent } from './Navigationbar/home-com/home-com.component';
 
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     
     
     
@@ -24,6 +26,7 @@ import { HomeComComponent } from './Navigationbar/home-com/home-com.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+   
     DefaultModModule
   ],
   providers: [],

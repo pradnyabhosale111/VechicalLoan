@@ -22,6 +22,11 @@ import { AboutUsComponent } from '../Navigationbar/about-us/about-us.component';
 import { LoanEnquiryComponent } from '../Navigationbar/loan-enquiry/loan-enquiry.component';
 import { SignInComponent } from '../Navigationbar/sign-in/sign-in.component';
 import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -46,6 +51,11 @@ import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
     MatDialogModule,
     MatProgressSpinnerModule,
     DefaultModRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule
   
   
   ],
