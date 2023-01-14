@@ -7,6 +7,7 @@ import { NavbarComponent } from '../defaultMod/navbar/navbar.component';
 import { FooterComponent } from '../defaultMod/footer/footer.component';
 
 // material all files 
+// matstepper , matlist , maticon , matinput 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -35,6 +36,8 @@ import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
  // module for chart   need to install -->  npm i ng-apexcharts
 import { NgApexchartsModule } from "ng-apexcharts";  
 
+
+// angu mat , bootstrap 
 @NgModule({
   declarations: [
     HeaderComponent,
