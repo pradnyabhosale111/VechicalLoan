@@ -38,12 +38,19 @@ import { NgApexchartsModule } from "ng-apexcharts";
 
 
 // angu mat , bootstrap 
+//signIn Imports
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 @NgModule({
   declarations: [
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
     DefautcomponentComponent,
+
+
+    // child of the navbar 
     HomeComComponent,
     EmiCalculatorComponent,
     LoanEnquiryComponent,
@@ -68,7 +75,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     MatFormFieldModule,
     MatNativeDateModule,
     NgApexchartsModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   
   
   ],

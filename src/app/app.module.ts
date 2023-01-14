@@ -13,21 +13,19 @@ import { HomeComComponent } from './Navigationbar/home-com/home-com.component';
 
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { DefaultModRoutingModule } from './default-mod/default-mod-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
-    
-    
-    
-    
+     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModModule
+    DefaultModModule,
+    DefaultModRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
