@@ -35,6 +35,9 @@ import { HomeComComponent } from '../Navigationbar/home-com/home-com.component';
  // module for chart   need to install -->  npm i ng-apexcharts
 import { NgApexchartsModule } from "ng-apexcharts";  
 
+//signIn Imports
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -65,7 +68,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     MatFormFieldModule,
     MatNativeDateModule,
     NgApexchartsModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   
   
   ],
