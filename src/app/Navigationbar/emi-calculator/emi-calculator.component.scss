@@ -1,236 +1,263 @@
-#chart {
-    max-width: 550px;
-    margin: 150px auto;
-    padding: 0;
-  }
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
-  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
 }
 
 body {
-  background-color: #fff9f9;
-  min-height: 700px;
-  width: 700px;
-  height: 100vh;
-  width: 100vw;
-  background-color:rgb(101, 202, 209);
-  background-image:
-radial-gradient(at 80% 0%, rgb(19, 45, 139) 0px, transparent 50%),
-radial-gradient(at 0% 50%, rgb(39, 135, 213) 0px, transparent 50%),
-radial-gradient(at 80% 50%, rgb(61, 83, 156) 0px, transparent 50%),
-radial-gradient(at 0% 100%, rgb(137, 197, 223) 0px, transparent 50%),
-radial-gradient(at 0% 0%, rgb(112, 193, 213) 0px, transparent 50%);
-}
-
-body >{
-  
-  margin: 0 auto;
-  width: 300px;
-  height: 400px;
-  transform: translateY(40%);
+  background: #f6f5f7;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: rgba(255,255,255,0.4);
-  border-radius: 20px;
-  box-shadow: 0px 0 31px 0px rgb(0 0 0 / 10%);
-}
-
-ul{
-  border: 10px;
-  border-color: rgb(8, 9, 9);
-}
-
-body > ul > li{
-  width:30%;
-    display: inline-block;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px;
 }
 
 h1 {
-  margin: 20px 0 10px 0;
-  font-size: 3rem;
-  font-weight: 400;
-  font-family: 'Poppins', sans-serif;
-}
-
-.emical-form {
-  width: 70%;
-  margin-bottom: 15px;
+  font-weight: bold;
+  margin: 0;
 }
 
 h4 {
-  margin: 20px 0 5px 0;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: bold;
+  margin: 0;
 }
 
-input {   // use it for output 
-  width: 80%;
-  font-size:1.1rem;
-  font-weight: 300;
-  padding: 7px 0;
-  border: none;
-  background-color: inherit;
+
+h2 {
+  text-align: center;
 }
 
-.loanAmount-input, .result, .interest-input, .tenure-input {    //code for input type 
-  width: 90%;
-  border-bottom: 1px solid #a4a4a4;
-}
-
-i {
-  width: 10%;
-  color: rgba(0,0,0,0.3);
-  padding-right: 7px;
-}
-
-.emical-form>p {
-  width: 90%;
-  font-size: 1.1rem;
-  text-align: right;
-  margin-top: 5px;
-  font-weight: 300;
-}
-
-.input-btn {
-  border: none;  
-  margin: 5px;
-  padding: 15px 20px;
-  width: 20%;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  background-image: linear-gradient(43deg, rgb(159, 217, 240) 0%, rgb(15, 29, 136) 100%);
-  color: rgb(255, 255, 255);
-  font-weight: 600;
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
 }
 
 span {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: hsl(269deg 26% 47%);
-}
-  
-#emi-output, #chart {
-  float:left;
-  width:30%;
-  border: 2px solid black;
+  font-size: 12px;
 }
 
-
-// my new CSS file
-
-.loan-calculator {
-  font-family: "Roboto", sans-serif;
-  width: 600px;
-  margin: 24px auto;
-  background: #fff;
-  box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  color: #14213d;
-  overflow: hidden;
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
 }
 
-.loan-calculator,
-.loan-calculator * {
-  box-sizing: border-box;
+button {
+  border-radius: 20px;
+  border: 1px solid #080079;
+  background-color: #080079;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 10px;
 }
 
-.loan-calculator .top {
-  background: #14213d;
-  color: #fff;
-  padding: 32px;
+button:active {
+  transform: scale(0.95);
 }
 
-.loan-calculator .top h2 {
-  margin-top: 0;
+button:focus {
+  outline: none;
 }
 
-.loan-calculator form {
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+form {
+  background-color: #ffffff;
   display: flex;
-  gap: 8px;
-  justify-content: space-between;
-}
-
-.loan-calculator .title {
-  margin-bottom: 16px;
-}
-
-.loan-calculator form input {
-  font-size: 20px;
-  padding: 8px 24px;
-  width: 100%;
-}
-
-.loan-calculator .result {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  margin: 15px;
 }
 
-.loan-calculator .result .left {
-  width: 100%;
-  padding: 8px 32px;
-}
-
-.loan-calculator .left h3 {
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-.loan-calculator .result .value {
-  font-size: 30px;
-  font-weight: 900;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(20, 33, 61, 0.2);
-}
-
-.loan-calculator .result .value::before {
-  content: "$";
-  font-size: 24px;
-  font-weight: 400;
-  margin-right: 6px;
-  opacity: 0.4;
-}
-
-.loan-calculator .calculate-btn {
-  background: #e63946;
-  color: #fff;
+input {
+  background-color: #eee;
   border: none;
-  padding: 8px 32px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 900;
-  cursor: pointer;
-  margin: 24px 0;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
 }
 
-.loan-calculator .right {
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
   width: 50%;
+  z-index: 2;
 }
 
-@media (max-width: 650px) {
-  .loan-calculator {
-    width: 90%;
-    max-width: 500px;
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
   }
 
-  .loan-calculator form {
-    flex-direction: column;
-    gap: 20px;
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
   }
+}
 
-  .loan-calculator .result {
-    flex-direction: column;
-    text-align: center;
-  }
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #3d2385;
+  background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
+  background: linear-gradient(to right, #3d2385, #3d2385);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+  color: red;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
 }
