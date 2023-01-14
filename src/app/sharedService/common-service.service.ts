@@ -6,13 +6,11 @@ import { Enquiry } from '../Model/enquiry';
   providedIn: 'root'
 })
 export class CommonServiceService {
-
-  
   
 
   constructor(private http:HttpClient) { }
 
-  enquiryDetails:Enquiry={
+ public enquiryDetails:Enquiry={
     customerEnquiryId:'',
     customerFirstname:'',
     customerMiddlename:'',
@@ -25,9 +23,9 @@ export class CommonServiceService {
     }
 
 
-    customerEnquiry(enqdata: Enquiry) {
+    customerEnquiry(enquiryDetails: Enquiry) {
     alert("call to common service ")
-    return this.http.post("http://localhost:9090/GCappps/enquiry",enqdata)  // done here
+    return this.http.post("http://localhost:9090/GCappps/enquiry",enquiryDetails)  // done here
   }
 
   // response are get in the form of the base responselist //it is for all data  
@@ -39,8 +37,8 @@ export class CommonServiceService {
 
 // for re module 
 // do some task for table seen table seen 
-  cibilScoreCheck(enqdata: Enquiry){
-    return this.http.put("http://localhost:9090/GCappps/cibilscore/"+enqdata.customerEnquiryId,enqdata)
+  cibilScoreCheck(enquiryDetails: Enquiry){
+    return this.http.put("http://localhost:9090/GCappps/cibilscore/"+enquiryDetails.customerEnquiryId,enquiryDetails)
   }
 
   // //old 

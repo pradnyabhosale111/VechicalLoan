@@ -1,12 +1,10 @@
 
 
 <h1>Loan Enquiry form</h1>
-<form [formGroup]="enquiryForm" (ngSubmit)="enquiryDetails()">
+<form [formGroup]="enquiryForm" (ngSubmit)="customerEnquiry()">
     
-
         <!-- customerid auto generation  -->
         <!-- customerEnquiryStatus  is hradcode in .ts file -->
-
     <div class="form-group">
       <label class="text-uppercase">FirstName :</label>
       <input type="text" formControlName="customerFirstname" placeholder="firstname"><!-- [(ngModel)]=u.username-->

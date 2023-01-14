@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Enquiry } from 'src/app/Model/enquiry';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
 
 @Component({
@@ -11,15 +9,8 @@ import { CommonServiceService } from 'src/app/sharedService/common-service.servi
 })
 export class LoanEnquiryComponent 
 {
-  // dueDateValidator: FormControl =  new FormControl('', [Validators.required]);
 
-  // register()
-  // {
-    
-  // }
-
-  
-  constructor(private fb:FormBuilder,private router:Router,private cs:CommonServiceService){}
+  constructor(private fb:FormBuilder,private cs:CommonServiceService){}
 
   enquiryForm:FormGroup
   
@@ -32,12 +23,13 @@ export class LoanEnquiryComponent
       customerEmail:[],
       customerMobileNumber:[],
       customerPancardNumber:[],
- 
+      customerEnquiryId:[],
+      customerEnquiryStatus:[] 
     })
     }
 
 
-    enquiryDetails(){
+  customerEnquiry(){
       this.cs.enquiryDetails=this.enquiryForm.value
 this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe();    
       

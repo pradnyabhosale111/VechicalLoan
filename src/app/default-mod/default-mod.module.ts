@@ -40,6 +40,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
 // angu mat , bootstrap 
 //signIn Imports
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatNativeDateModule,
     NgApexchartsModule,
     CommonModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   
   
   ],
