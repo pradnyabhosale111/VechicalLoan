@@ -1,1 +1,67 @@
-<p>emi-calculator works!</p>
+<!--The content below is only a placeholder and can be replaced.-->
+
+<body>
+    <ul>
+      <!-- input list  -->
+      <li id="inputdata">
+        <h1>Emi Calculator</h1>
+        <h4>Loan Amount</h4>
+        <div class="loanAmount-input">
+          <i class="fas fa-user"></i>
+          <input
+            type="number"
+            [(ngModel)]="loanAmount"
+            placeholder="Enter Loan amount.."
+          />
+        </div>
+  
+        <h4>Interest Rate:(%)</h4>
+        <div class="interest-input">
+          <i class="fas fa-lock"></i>
+          <input
+            type="number"
+            [(ngModel)]="interest"
+            placeholder="Enter IR per year.."
+          />
+        </div>
+  
+        <h4>Loan Duration(Months):</h4>
+        <div class="tenure-input">
+          <i class="fas fa-lock"></i>
+          <input
+            type="number"
+            [(ngModel)]="tenure"
+            placeholder="Enter loan duration.."
+          />
+        </div>
+        <button class="input-btn" type="submit" (click)="cal()">Calculate</button>
+  
+        <button class="input-btn" type="submit" (click)="reset()">Reset</button>
+      </li>
+  
+      <!-- output list  -->
+      <li id="emi-output">
+        <div class="result">
+          Monthly Payment ( EMI ): <span>{{ emi | currency : "INR" }}</span>
+        </div>
+        <div class="result">
+          Total Repayment: <span>{{ totalRepayment | currency : "INR" }}</span>
+        </div>
+        <div class="result">
+          Total Interest Cost:
+          <span>{{ totalInterestCost | currency : "INR" }}</span>
+        </div>
+      </li>
+
+      <!-- pie chart   -->
+      <li id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [labels]="chartOptions.labels"
+          [responsive]="chartOptions.responsive"
+        ></apx-chart>
+      </li>
+    </ul>
+  </body>
+  
