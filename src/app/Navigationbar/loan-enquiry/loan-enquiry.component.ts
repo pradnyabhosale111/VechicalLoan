@@ -17,13 +17,14 @@ export class LoanEnquiryComponent
   ngOnInit(){
     this.enquiryForm=this.fb.group({
       enquiryId:[],
-      customerFirstName:[],
-      customerMiddleName:[],
-      customerLastName:[],
-      customerDateOfBirth:[],
-      customerMobileNumber:[],
-      pancardNumber:[],
-      customerEmail:[],
+      customerFirstName:['',[Validators.required]],
+      customerMiddleName:['',[Validators.required]],
+      customerLastName:['',[Validators.required]],
+      customerDateOfBirth:['',[Validators.required]],
+      customerMobileNumber:['',[Validators.required]],
+      pancardNumber:['',[Validators.required]],
+      customerEmail:['',[Validators.required, Validators.email]],
+      //below data is null
       enquiryStatus:[] ,
       cibilData:[]
        })
@@ -35,6 +36,10 @@ export class LoanEnquiryComponent
       this.cs.enquiryDetails=this.enquiryForm.value
 this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe();    
       
+    }
+
+    get customerFirstName(){
+      return this.enquiryForm.get('customerFirstName');
     }
 
 }

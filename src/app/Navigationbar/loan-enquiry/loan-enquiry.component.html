@@ -8,6 +8,7 @@
     <div class="form-group">
       <label class="text-uppercase">FirstName :</label>
       <input type="text" formControlName="customerFirstName" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+      <span  *ngIf="customerFirstName && customerFirstName.invalid && customerFirstName.touched " style="color: red;">*Required Field</span>
     </div>
 
     <div class="form-group">
@@ -42,7 +43,7 @@
 
 
       <div class="form-check">
-        <button type="submit" class="btn btn-login float-right" style="margin-right: 50%;">Submit Enquiry</button>
+        <button type="submit" class="btn btn-login float-right" style="margin-right: 50%;"  [disabled]="enquiryForm.invalid">Submit Enquiry</button>
         <!--</button>(click)="login(u)">Submit</button>-->
       </div>
       <div class="overlay-container">
