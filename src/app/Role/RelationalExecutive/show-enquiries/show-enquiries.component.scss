@@ -1,0 +1,52 @@
+thead{
+    border-radius: 15px;
+    background-color: #3d2385;
+    color: aliceblue;
+    
+}
+ul > li {
+	
+    margin-right: 0;
+      display: inline-block;
+        font-size: 14px;
+        padding: 0 15px;
+        position: relative;
+        width: 32%;
+  }
+
+  .buttonclass1 {
+    border-radius: 20px;
+    border: 1px solid #080079;
+    background-color: #d08726;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  .buttonclass2 {
+    border-radius: 20px;
+    border: 1px solid #080079;
+    background-color: #0b9933;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  .buttonclass3 {
+    border-radius: 20px;
+    border: 1px solid #080079;
+    background-color: #df1111;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }

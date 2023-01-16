@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import {
   ApexNonAxisChartSeries,
   ApexResponsive,
@@ -40,8 +40,7 @@ export class EmiCalculatorComponent {
     totalRepayment: number;
   
     public cal() {      
-      var interestPerYear = (this.loanAmount * this.interest) / 100;
-  
+      
       this.interest = this.interest / (12 * 100);
       this.emi =
         (this.loanAmount *
@@ -80,8 +79,7 @@ export class EmiCalculatorComponent {
     
     @ViewChild("chart") chart: ChartComponent;
     public chartOptions: Partial<ChartOptions>;
-  
-
+    
   }
   
 

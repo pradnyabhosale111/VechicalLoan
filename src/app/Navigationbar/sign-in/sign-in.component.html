@@ -1,8 +1,6 @@
 <div class="container" #container>
   <div class="form-container sign-up-container">
-    <form action="#" [formGroup]="registerf">
-
-      
+    <form action="#" [formGroup]="registerf" (ngSubmit)="signUp()">
       <h1>Lets Get Started!</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -15,11 +13,11 @@
         placeholder="Password"
         formControlName="customerPassword"
       />
-      <button>Register</button>
+      <input type="submit" value="Register" class="buttonclass" />
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form action="#" [formGroup]="loginf">
+    <form action="#" [formGroup]="loginf" (ngSubmit)="signIn()">
       <h1>Sign in</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -32,7 +30,7 @@
         formControlName="customerPassword"
       />
       <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
+      <input type="submit" value="Sign In" class="buttonclass" />
     </form>
   </div>
   <div class="overlay-container">

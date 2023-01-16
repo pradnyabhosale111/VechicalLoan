@@ -1,19 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<body>
-    <ul>
+<!-- my new code -->
+  <div class="container" #container>
+    <div class="form-container sign-up-container">
+    </div>
+    <div class="form-container sign-in-container">
       <!-- input list  -->
-      <li id="inputdata">
-        <h1>Emi Calculator</h1>
-        <h4>Loan Amount</h4>
+      <div id="inputdata" style="margin-top: 20px;">
+        <h1 align="center">Emi Calculator</h1>
+        <h4 align="center">Loan Amount</h4>
         <div class="loanAmount-input">
-          <i class="fas fa-user"></i>
-          <input type="number" [(ngModel)]="loanAmount" placeholder="Enter Loan amount.."/>
+          <input
+            type="number"
+            [(ngModel)]="loanAmount"
+            placeholder="Enter Loan amount.."
+          />
         </div>
   
-        <h4>Interest Rate:(%)</h4>
+        <h4 align="center">Interest Rate:(%)</h4>
         <div class="interest-input">
-          <i class="fas fa-lock"></i>
           <input
             type="number"
             [(ngModel)]="interest"
@@ -21,93 +24,47 @@
           />
         </div>
   
-        <h4>Loan Duration(Months):</h4>
+        <h4 align="center">Loan Duration(Months):</h4>
         <div class="tenure-input">
-          <i class="fas fa-lock"></i>
           <input
             type="number"
             [(ngModel)]="tenure"
             placeholder="Enter loan duration.."
           />
         </div>
-        <div>
-        <button class="input-btn" type="submit" (click)="cal()">Calculate</button>
-        <button class="input-btn" type="submit" (click)="reset()">Reset</button>
+        <button style="margin-left: 20px ;" class="input-btn" type="submit" (click)="cal()">Calculate</button>
+        <button style="margin-left: 20px ;" class="input-btn" type="submit" (click)="reset()">Reset</button>
       </div>
-      </li>
   
-      <!-- output list  -->
-      <li id="emi-output">
-        <div class="result">
-          Monthly Payment ( EMI ): <span>{{ emi | currency : "INR" }}</span>
-        </div>
-        <div class="result">
-          Total Repayment: <span>{{ totalRepayment | currency : "INR" }}</span>
-        </div>
-        <div class="result">
-          Total Interest Cost:
-          <span>{{ totalInterestCost | currency : "INR" }}</span>
-        </div>
-      </li>
+    </div>
+      <div class="overlay-container">
+       <div class="overlay">
+        
+        <div class="overlay-panel overlay-right">
+           <!-- output list  -->
+          <div id="emi-output">
+            <div class="result">
+             <h4>Monthly Payment ( EMI ):</h4> <h4 style="font-weight:900 ;"> <span>{{ emi | currency : "INR" }}</span></h4> 
+            </div>
+            <div class="result">
+              <h4>Total Repayment:</h4>  <h4 style="font-weight:900;"> <span>{{ totalRepayment | currency : "INR" }}</span></h4>
+            </div>
+            <div class="result">
+              <h4>Total Interest Cost:</h4>
+              <h4 style="font-weight:900 ;"><span>{{ totalInterestCost | currency : "INR" }}</span></h4>
+            </div>
+          </div>
 
-      <!-- pie chart   -->
-      <li id="chart">
-        <apx-chart
+          <!-- pie chart   -->
+      <div id="chart">
+        <apx-chart style="size: 50px;"
           [series]="chartOptions.series"
           [chart]="chartOptions.chart"
           [labels]="chartOptions.labels"
           [responsive]="chartOptions.responsive"
         ></apx-chart>
-      </li>
-    </ul>
-  </body>
-  
-  <!-- my new Code -->
-  <div class="container" #container>
-    <div class="form-container sign-in-container">
-      <form action="#" >
-        
-        <!-- input list  -->
-      <div id="inputdata">
-        <h1>Emi Calculator</h1>
-        <h4>Loan Amount</h4>
-        <div class="loanAmount-input">
-         
-          <input type="number" [(ngModel)]="loanAmount" placeholder="Enter Loan amount.."/>
-        </div>
-  
-        <h4>Interest Rate:(%)</h4>
-        <div class="interest-input">
-          
-          <input
-            type="number"
-            [(ngModel)]="interest"
-            placeholder="Enter IR per year.."
-          />
-        </div>
-  
-        <h4>Loan Duration(Months):</h4>
-        <div class="tenure-input">
-         
-          <input
-            type="number"
-            [(ngModel)]="tenure"
-            placeholder="Enter loan duration.."
-          />
-        </div>
-        <button class="input-btn" type="submit" (click)="cal()">Calculate</button>
-  
-        <button class="input-btn" type="submit" (click)="reset()">Reset</button>
       </div>
 
-      </form>
-    </div>
-
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          
-          
         </div>
       </div>
     </div>
