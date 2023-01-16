@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import {
   ApexNonAxisChartSeries,
   ApexResponsive,
@@ -80,7 +80,18 @@ export class EmiCalculatorComponent {
     
     @ViewChild("chart") chart: ChartComponent;
     public chartOptions: Partial<ChartOptions>;
-  
+    
+    @ViewChild('container')
+  container: ElementRef;
+
+  signIn() {
+    this.container.nativeElement.classList.remove('right-panel-active');
+    
+  }
+
+  signUp() {
+    this.container.nativeElement.classList.add('right-panel-active');
+  }
 
   }
   

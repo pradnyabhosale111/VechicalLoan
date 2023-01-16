@@ -1,19 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- my new code -->
 
-<body>
-    <ul>
+  <div class="container" #container>
+    <div class="form-container sign-up-container">
+    </div>
+    <div class="form-container sign-in-container">
       <!-- input list  -->
-      <li id="inputdata">
-        <h1>Emi Calculator</h1>
-        <h4>Loan Amount</h4>
+      <div id="inputdata" style="margin-top: 20px;">
+        <h1 align="center">Emi Calculator</h1>
+        <h4 align="center">Loan Amount</h4>
         <div class="loanAmount-input">
-          <i class="fas fa-user"></i>
-          <input type="number" [(ngModel)]="loanAmount" placeholder="Enter Loan amount.."/>
+          <input
+            type="number"
+            [(ngModel)]="loanAmount"
+            placeholder="Enter Loan amount.."
+          />
         </div>
   
-        <h4>Interest Rate:(%)</h4>
+        <h4 align="center">Interest Rate:(%)</h4>
         <div class="interest-input">
-          <i class="fas fa-lock"></i>
           <input
             type="number"
             [(ngModel)]="interest"
@@ -21,95 +25,49 @@
           />
         </div>
   
-        <h4>Loan Duration(Months):</h4>
+        <h4 align="center">Loan Duration(Months):</h4>
         <div class="tenure-input">
-          <i class="fas fa-lock"></i>
           <input
             type="number"
             [(ngModel)]="tenure"
             placeholder="Enter loan duration.."
           />
         </div>
-        <button class="input-btn" type="submit" (click)="cal()">Calculate</button>
+        <button style="margin-left: 20px ;" class="input-btn" type="submit" (click)="cal()">Calculate</button>
+        <button style="margin-left: 20px ;" class="input-btn" type="submit" (click)="reset()">Reset</button>
+      </div>
   
-        <button class="input-btn" type="submit" (click)="reset()">Reset</button>
-      </li>
-  
-      <!-- output list  -->
-      <li id="emi-output">
-        <div class="result">
-          Monthly Payment ( EMI ): <span>{{ emi | currency : "INR" }}</span>
-        </div>
-        <div class="result">
-          Total Repayment: <span>{{ totalRepayment | currency : "INR" }}</span>
-        </div>
-        <div class="result">
-          Total Interest Cost:
-          <span>{{ totalInterestCost | currency : "INR" }}</span>
-        </div>
-      </li>
+    </div>
+      <div class="overlay-container">
+       <div class="overlay">
+        
+        <div class="overlay-panel overlay-right">
+           <!-- output list  -->
+          <div id="emi-output">
+            <div class="result">
+             <h4>Monthly Payment ( EMI ):</h4> <h4 style="font-weight:900 ;"> <span>{{ emi | currency : "INR" }}</span></h4> 
+            </div>
+            <div class="result">
+              <h4>Total Repayment:</h4>  <h4 style="font-weight:900;"> <span>{{ totalRepayment | currency : "INR" }}</span></h4>
+            </div>
+            <div class="result">
+              <h4>Total Interest Cost:</h4>
+              <h4 style="font-weight:900 ;"><span>{{ totalInterestCost | currency : "INR" }}</span></h4>
+            </div>
+          </div>
 
-      <!-- pie chart   -->
-      <li id="chart">
-        <apx-chart
+          <!-- pie chart   -->
+      <div id="chart">
+        <apx-chart style="size: 50px;"
           [series]="chartOptions.series"
           [chart]="chartOptions.chart"
           [labels]="chartOptions.labels"
           [responsive]="chartOptions.responsive"
         ></apx-chart>
-      </li>
-    </ul>
-  </body>
-  
-  <!-- my new Code -->
-
-  <div class="loan-calculator">
-    <div class="top">
-      <h2>Loan Calculator</h2>
-
-      <form action="#">
-        <div class="group">
-          <div class="title">Amount</div>
-          <input type="text" value="30000" class="loan-amount" />
-        </div>
-
-        <div class="group">
-          <div class="title">Interest Rate</div>
-          <input type="text" value="8.5" class="interest-rate" />
-        </div>
-
-        <div class="group">
-          <div class="title">Tenure (in months)</div>
-          <input type="text" value="240" class="loan-tenure" />
-        </div>
-      </form>
-  </div>
-    <div class="result">
-      <div class="left">
-        <div class="loan-emi">
-          <h3>Loan EMI</h3>
-          <div class="value">123</div>
-        </div>
-
-        <div class="total-interest">
-          <h3>Total Interest Payable</h3>
-          <div class="value">1234</div>
-        </div>
-
-        <div class="total-amount">
-          <h3>Total Amount</h3>
-          <div class="value">12345</div>
-        </div>
-
-        <button class="calculate-btn">Calculate</button>
       </div>
 
-      <div class="right">
-        <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
       </div>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
-
-  <script src="main.js"></script>
+  
