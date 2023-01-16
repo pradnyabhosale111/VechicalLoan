@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label  class="text-uppercase">Date-of-Birth :</label>
-        <input type="text" formControlName="customerDateOfBirth" placeholder="Enter Date-of-Birth.."><!-- [(ngModel)]=u.username-->
+        <input type="date" formControlName="customerDateOfBirth" placeholder="Enter Date-of-Birth.."><!-- [(ngModel)]=u.username-->
         <span *ngIf="customerDateOfBirth && customerDateOfBirth.invalid && customerDateOfBirth.touched" style="color: red;">*Required</span>
         
       </div>
