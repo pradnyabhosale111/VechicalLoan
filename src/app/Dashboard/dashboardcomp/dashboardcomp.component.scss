@@ -1,0 +1,95 @@
+// @import "../node_modules/@angular/material/theming";
+// @include mat-core();
+
+// $my-primary: mat-palette();
+
+
+
+mat-toolbar {
+    background: #3d2385;
+    color: white;
+  }
+  
+  mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #3d2385;
+    color: white;
+    border-radius: 10px;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .content {
+    height: calc(100vh - 130px);
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 32px;
+    padding: 10px;
+    overflow: auto;
+  }
+  
+  mat-sidenav-container {
+    height: calc(100vh - 65px);
+  }
+  
+  .menu-button {  
+    width:100%;
+    display: flex;
+      margin-left: 0;
+      // display: flex;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: white;
+      background-color: #080079;
+  
+    mat-icon {
+      margin-left: 8px;
+    }
+  }
+  
+  .log-button{
+      width:90px;
+      margin-left: 0px;
+      margin-right: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 0.9rem;
+      color: #f2f4f8;
+      
+      background-color: #080079;
+      mat-icon {
+          margin-left: 0px;
+        }
+  
+  }
+  
+  .avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    margin-top: 8px;
+    font-weight: normal;
+  }
+  
+  .designation {
+    margin-top: 2px;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: lightgrey;
+  }
+  
+  mat-divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  

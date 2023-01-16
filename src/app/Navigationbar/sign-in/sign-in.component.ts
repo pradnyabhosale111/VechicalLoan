@@ -1,44 +1,65 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent {
-
   @ViewChild('container')
   container: ElementRef;
 
+  constructor(private fb: FormBuilder, private router: Router) {}
+
+  //login data is here
+  loginf: FormGroup;
+  //registration data is here
+  registerf: FormGroup;
+
+  ngOnInit() {
+    this.loginf = this.fb.group({
+      customerEmail: [],
+      customerPassword: [],
+    });
+
+    this.registerf = this.fb.group({
+      customerEmail: [],
+      customerPassword: [],
+      customerName: [],
+    });
+  }
+
   signIn() {
     this.container.nativeElement.classList.remove('right-panel-active');
-    console.log(this.loginf)
+    if (
+      this.loginf.get('customerEmail').value === 'user' &&
+      this.loginf.get('customerPassword').value === 'user123'
+    ) {
+      alert('welcome User');
+      localStorage.setItem('role', 'User'); //role is the key and OExecutive is the data  this value is get in the dashboard.ts file now
+      this.router.navigateByUrl('dashboardlayout/User'); // dashborad it is differnet module where we rout now
+    } else if (
+      this.loginf.get('customerEmail').value === 'oe' &&
+      this.loginf.get('customerPassword').value === 'oe123'
+    ) {
+      alert('welcome OExecutive');
+      localStorage.setItem('role', 'OExecutive');
+      this.router.navigateByUrl('dashboardlayout/OExecutive');
+    } else if (
+      this.loginf.get('customerEmail').value === 're' &&
+      this.loginf.get('customerPassword').value === 're123'
+    ) {
+      alert('welcome RExecutive');
+      localStorage.setItem('role', 'RExecutive');
+      this.router.navigateByUrl('dashboardlayout/RExecutive');
+    } else {
+      alert('invalid credetials ...!!!!');
+    }
   }
 
   signUp() {
     this.container.nativeElement.classList.add('right-panel-active');
   }
-
-  constructor(private fb:FormBuilder)
-  {}
-
-  //login data is here
-  loginf:FormGroup;
-  //registration data is here
-  registerf:FormGroup;
-
-  ngOnInit()
-  {
-    this.loginf = this.fb.group({
-      customerEmail:[],
-      customerPassword:[]
-    })
-
-    this.registerf = this.fb.group({
-      customerEmail:[],
-      customerPassword:[],
-      customerName:[]
-    })
-}
 }

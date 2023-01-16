@@ -1,0 +1,499 @@
+<!-- <form [formGroup]="Empregister" (ngSubmit)="HandleSubmit()">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="Basicform">
+      // 1st form here 
+      <div formGroupName="basic">
+
+        <ng-template matStepLabel>Fill Basic Details</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="customerFirstName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Middle Name</mat-label>
+          <input matInput formControlName="customerMiddleName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="customerLastName" required />
+        </mat-form-field>
+       
+        <mat-form-field appearance="fill">
+          <mat-label>Date of Birth</mat-label>
+          <input type="date" matInput formControlName="customerDateOfBirth" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <input matInput formControlName="customerGender" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile No:</mat-label>
+          <input matInput formControlName="customerMobileNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Additional Mobile No:</mat-label>
+          <input matInput formControlName="customerAdditionalMobileNumber" required />
+        </mat-form-field>
+          
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="customerEmail" required />
+        </mat-form-field>
+        
+
+        <mat-form-field appearance="fill">
+          <mat-label>PanCard</mat-label>
+          <input matInput formControlName="customerPanCard" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>AadharCard</mat-label>
+          <input matInput formControlName="customerAadharCard" required />
+        </mat-form-field>
+       
+
+        <mat-form-field appearance="fill">
+          <mat-label>Qualification</mat-label>
+          <input matInput formControlName="customerQualification" required />
+        </mat-form-field>
+
+      
+        <mat-form-field>
+          <mat-label>Loan Status</mat-label>
+          <input matInput formControlName="customerLoanStatus" required />
+        </mat-form-field>
+        <div>
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+      </div>
+    </mat-step>
+
+    // 2nd form here 
+
+    <mat-step [stepControl]="addressdetailsform" label="Fill out contact info">   // method name in .ts file 
+      <div formGroupName="addressdetails">                      // form name in .ts file 
+        <ng-template matStepLabel>Address Details</ng-template>
+        <h2>Local Address</h2>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>House No:</mat-label>
+          <input matInput formControlName="houseNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="streetname" required />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Area Name</mat-label>
+          <input matInput formControlName="areaname" required />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>City Name</mat-label>
+          <input matInput formControlName="cityname" required />
+        </mat-form-field>  
+
+        <mat-form-field appearance="fill">
+          <mat-label>District</mat-label>
+          <input matInput formControlName="district" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state" required />
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Pincode</mat-label>
+          <input matInput formControlName="pincode" required />
+        </mat-form-field>
+
+
+        <h2>Permanent Address</h2>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>House No:</mat-label>
+          <input matInput formControlName="phouseNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="pstreetname" required />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Area Name</mat-label>
+          <input matInput formControlName="pareaname" required />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>City Name</mat-label>
+          <input matInput formControlName="pcityname" required />
+        </mat-form-field>  
+
+        <mat-form-field appearance="fill">
+          <mat-label>District</mat-label>
+          <input matInput formControlName="pdistrict" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="pstate" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Pincode</mat-label>
+          <input matInput formControlName="ppincode" required />
+        </mat-form-field>
+
+        <div>
+          <button mat-raised-button color="primary" matStepperPrevious>
+            Back
+          </button>
+          |
+          <button mat-raised-button color="accent" matStepperNext>Next</button>
+        </div>
+      </div>
+    </mat-step>
+
+    </!-- 3rdd here --/>
+    <mat-step [stepControl]="customerFinancialDataForm" label="Profession Details">
+      <div formGroupName="customerFinancialData">
+        <ng-template matStepLabel>Financial Information</ng-template>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Loan required</mat-label>
+            <input matInput formControlName="customerTotalLoanRequired" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Account No</mat-label>
+            <input matInput formControlName="customerBankAccountNumber" required />
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Bank Name</mat-label>
+            <input matInput formControlName="customerBankName" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Branch</mat-label>
+            <input matInput formControlName="customerBankBranchName" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>IFSC code</mat-label>
+            <input matInput formControlName="customerBankIfscNumber" required />
+          </mat-form-field>
+
+            
+          <mat-form-field appearance="fill"> 
+            <mat-label>Occupation Type</mat-label>                                  </!-- drop down of occupation --/>
+          <input matInput formControlName="occupationType" required />
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">  
+          <mat-label>Designation</mat-label>                                      </!-- drop down of occupation --/>
+        <input matInput formControlName="occupationDesignation" required />
+      </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Monthly Income</mat-label>
+          <input matInput formControlName="occupationMonthlyIncome" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Monthly Deduction</mat-label>
+          <input matInput formControlName="customerMonthlyDeduction" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>EmployeerName</mat-label>
+          <input matInput formControlName="EmployeerName" required />
+        </mat-form-field>
+
+        <div>
+          <button mat-raised-button color="primary" matStepperPrevious>
+            Back
+          </button>
+          |
+          <button mat-raised-button color="accent" matStepperNext>Next</button>
+        </div>
+      </div>
+    </mat-step>
+
+
+
+    </!-- 4th here --/>
+    <mat-step [stepControl]="dealerDetailsform" label="Dealer Details">
+      <div formGroupName="dealerDetails">
+        <ng-template matStepLabel>Dealer Details</ng-template>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="dealerName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="dealerAddress" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Account No:</mat-label>
+          <input matInput formControlName="dealerBankAccountNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Bank Name</mat-label>
+          <input matInput formControlName="dealerBankName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Branch</mat-label>
+          <input matInput formControlName="dealerBankBranchName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>IFSC</mat-label>
+          <input matInput formControlName="dealerBankBrancIFSCNumber" required />
+        </mat-form-field>
+
+
+    <mat-step [stepControl]="vehicleDetailsform" label="Vehicle Details">
+      <div formGroupName="vehicleDetails">
+        <mat-form-field appearance="fill">
+          <mat-label>Model</mat-label>
+          <input matInput formControlName="customerVehicleModel" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Chassis No</mat-label>
+          <input matInput formControlName="customerVehicleChassis" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Vehicle Number</mat-label>
+          <input matInput formControlName="customerVehicleNumber" required />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>RC Number</mat-label>
+          <input matInput formControlName="customerVehicleRcNumber" required />
+        </mat-form-field>
+
+        <div>
+          <button mat-raised-button color="primary" matStepperPrevious>
+            Back
+          </button>
+          |
+          <button mat-raised-button color="accent" matStepperNext>Next</button>
+        </div>
+      </div>
+    </mat-step>
+
+    
+
+
+
+
+        <div>
+          <button mat-raised-button color="primary" matStepperPrevious>
+            Back
+          </button>
+          |
+          <button mat-raised-button color="accent" matStepperNext>Next</button>
+        </div>
+      </div>
+    </mat-step>
+
+    
+    <mat-step label="Documents Details">
+      </!-- <div formGroupName="allDocuments"> --/>
+
+      <div class="mb-3">
+        <label for="exampleInputName">PanCard</label>
+        <input type="file" (change)="onselectfile1($event)" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName">Income Proof</label>
+        <input type="file" (change)="onselectfile2($event)" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName">Photo</label>
+        <input
+          type="file"
+          class="file-input"
+          (change)="onselectfile3($event)"
+          #fileUpload
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName">AadharCard</label>
+        <input
+          type="file"
+          class="file-input"
+          (change)="onselectfile4($event)"
+          #fileUpload
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName">Signature</label>
+        <input
+          type="file"
+          class="file-input"
+          (change)="onselectfile5($event)"
+          #fileUpload
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName">Bank Passbook</label>
+        <input
+          type="file"
+          class="file-input"
+          (change)="onselectfile6($event)"
+          #fileUpload
+        />
+      </div>
+      <br /><br /><br />
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>
+          Back
+        </button>
+        |
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+      </!-- </div> --/>
+    </mat-step>
+    <mat-step label="ALL Details">
+      <mat-list>
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerFirstName }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerMiddleName }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerLastName }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerMobileNumber }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{
+            this.Empregister.value.basic.customerAdditionalMobileNumber
+          }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerPanCard }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerAadharCard }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerDateOfBirth }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerEmail }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{
+            this.Empregister.value.basic.customerQualification
+          }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerGender }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.basic.customerLoanStatus }}</mat-list-item
+        >
+        <h3>Local Address Details</h3>
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.state }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.district }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.cityname }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.areaname }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pincode }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.houseNumber }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.streetname }}</mat-list-item
+        >
+        <h3>Permanent address Details</h3>
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pstate }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pcityname }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pdistrict }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pareaname }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.ppincode }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{
+            this.Empregister.value.addressdetails.phouseNumber
+          }}</mat-list-item
+        >
+        <mat-list-item>
+          <strong>First Name:</strong>
+          {{ this.Empregister.value.addressdetails.pstreetname }}</mat-list-item
+        >
+      </mat-list>
+      <br /><br /><br />
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>
+          Back
+        </button>
+        |
+        <button mat-raised-button color="accent" matStepperNext>Submit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</form>-->

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
 
@@ -12,21 +12,23 @@ export class LoanEnquiryComponent
 
   constructor(private fb:FormBuilder,private cs:CommonServiceService){}
 
-  enquiryForm:FormGroup
+ public enquiryForm:FormGroup
   
   ngOnInit(){
     this.enquiryForm=this.fb.group({
-      customerFirstname:[],
-      customerMiddlename:[],
-      customerLastname:[],
+      enquiryId:[],
+      customerFirstName:[],
+      customerMiddleName:[],
+      customerLastName:[],
       customerDateOfBirth:[],
-      customerEmail:[],
       customerMobileNumber:[],
-      customerPancardNumber:[],
-      customerEnquiryId:[],
-      customerEnquiryStatus:[] 
-    })
+      pancardNumber:[],
+      customerEmail:[],
+      enquiryStatus:[] ,
+      cibilData:[]
+       })
     }
+
 
 
   customerEnquiry(){
