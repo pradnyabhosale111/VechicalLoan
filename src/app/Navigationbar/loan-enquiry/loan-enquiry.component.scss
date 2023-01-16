@@ -27,7 +27,6 @@ body {
 
 h1 {
   font-weight: bold;
-  margin: 10px;
   align-items: center;
 }
 
@@ -84,12 +83,12 @@ button.ghost {
 form {
   background-color: #ffffff;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex-direction: column;
   padding: 0 50px;
   height: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 input {
@@ -107,7 +106,7 @@ input {
   position: relative;
   overflow: hidden;
   width: 768px;
-  height: 600px;
+  height: 1000px;
   max-width: 100%;
   min-height: 480px;
   margin-top: 50px;
@@ -164,12 +163,13 @@ input {
 .overlay-container {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 50%;
+  left: 80%;
+  width: 20%;
   height: 100%;
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
+
 }
 
 .container.right-panel-active .overlay-container {
@@ -267,3 +267,8 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+
+.form-group{
+  margin-right: 25%;
+}
+

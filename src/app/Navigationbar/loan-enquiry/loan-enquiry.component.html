@@ -1,8 +1,7 @@
-<h1 align="center">Enquiry Form</h1>
-<div class="container" #container>
 
-<h1>Loan Enquiry form</h1>
+<div class="container" #container>
 <form [formGroup]="enquiryForm" (ngSubmit)="customerEnquiry()">
+  <h1 align="center" style="margin-top: 10px;">Loan Enquiry form</h1>
     
         <!-- customerid auto generation  -->
         <!-- customerEnquiryStatus  is hradcode in .ts file -->
@@ -43,8 +42,14 @@
 
 
       <div class="form-check">
-        <button type="submit" class="btn btn-login float-right">Submit Enquiry</button>
+        <button type="submit" class="btn btn-login float-right" style="margin-right: 50%;">Submit Enquiry</button>
         <!--</button>(click)="login(u)">Submit</button>-->
       </div>
-
-      </form>
+      <div class="overlay-container">
+        <div class="overlay">
+         <div class="overlay-panel overlay-right">
+         </div>
+        </div>
+      </div>
+</form>
+</div>
