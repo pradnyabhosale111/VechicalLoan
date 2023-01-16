@@ -1,0 +1,38 @@
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+
+}
+.section{
+    background-color: rgb(182, 191, 253);
+}
+.section img{
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width:60%;
+    height: 450px;
+    margin:10rem auto 0 auto
+
+
+}
+h1{
+    font-size: 1.6em;
+
+   font-weight: 800;
+   font-style: italic;
+   align-items: safe center;
+
+ 
+}
+.section h1{
+    color:rgb(17, 20, 22)
+     align-center
+}
+
+.section p{
+    color:bisque
+   
+}

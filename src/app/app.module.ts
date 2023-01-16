@@ -14,10 +14,14 @@ import { HomeComComponent } from './Navigationbar/home-com/home-com.component';
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { DefaultModRoutingModule } from './default-mod/default-mod-routing.module';
+import { FAQComponent } from './Navigationbar/faq/faq.component';
+import { InterestRateComponent } from './Navigationbar/interest-rate/interest-rate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FAQComponent,
+    InterestRateComponent,
      
   ],
   imports: [
