@@ -23,8 +23,8 @@
  
  .wrapper .top_nav{
    /* background-image: url(https://www.onlinesbi.sbi/sbijava/images/banner33.jpg); */
-   background-image:  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfhcyGLf10lgs0IUQ-YzxwxInG-QkbW0xmxA&usqp=CAU);
-   margin-top: 2px;
+   background-image:  url(/assets/pexels-gustavo-fring-4895421.jpg) ;
+   margin-top: 0px;
    background-repeat: no-repeat;
    background-size: 100% 100%;
    width: 100%;
@@ -37,6 +37,7 @@
  }
  
  .wrapper .top_nav .left{
+  
    display: flex;
    align-items: center;
    margin-left: 7%;
@@ -53,19 +54,7 @@
    width: max-content;
  }
  
- .wrapper .top_nav .left .logo p span {
-   color:rgb(243, 222, 36);
-   font-family: 'Poppins', sans-serif;
-   font-size: 40px;
-   padding-bottom: 4%;
-  font-style: italic;
- 
- }
- 
- 
- 
- 
- 
+
  .wrapper .top_nav .right1 ul {
    display: inline-flex;
    float: right;
@@ -122,3 +111,6 @@
  }
 
   
+.logo{
+  background-image: url(/src/assets/onlinelogomaker-011623-1727-9181-2000-transparent.png);
+}

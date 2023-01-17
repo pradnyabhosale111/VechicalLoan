@@ -14,14 +14,12 @@ import { DashboardModule } from './Dashboard/dashboard/dashboard.module';
 import { OperationalExecutiveModule } from './Role/operational-executive/operational-executive.module';
 import { RelationalExecutiveModule } from './Role/relational-executive/relational-executive.module';
 import { UserModule } from './Role/user/user.module';
+import { ApplicationlistComponent } from './Role/Oecomp/applicationlist/applicationlist.component';
+import { SingleappliactionComponent } from './Role/Oecomp/singleappliaction/singleappliaction.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FAQComponent,
-    InterestRateComponent,
-     
-  ],
+  declarations: [AppComponent, ApplicationlistComponent, SingleappliactionComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,7 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cibil } from '../Model/cibil';
+import { Customer } from '../Model/customer';
+import { CustomerAddress } from '../Model/customer-address';
+import { CustomerFinancialData } from '../Model/customer-financial-data';
+import { Dealer } from '../Model/dealer';
+import { Documents } from '../Model/documents';
 import { EnquiryDetails } from '../Model/EnquiryDetails';
+import { GuarantorDetails } from '../Model/guarantor-details';
+import { Ledger } from '../Model/ledger';
+import { LoanDisbursement } from '../Model/loan-disbursement';
+import { SanctionLetter } from '../Model/sanction-letter';
 
 
 @Injectable({
@@ -26,13 +35,32 @@ export class CommonServiceService {
  }
 
 
- public cibildata:Cibil={
-cibilId:'',                                   
-cibilScore:'',                                     
-cibilGeneratedDateTime:'',                                 
-remark:'',                                  
-previousEmi:''                        
- }
+
+public customer:Customer={
+  customerId: undefined,
+  enquiryId: '',
+  customerFirstName: '',
+  customerMiddleName: '',
+  customerLastName: '',
+  customerDateOfBirth: '',
+  customerGender: '',
+  customerMobileNumber: 0,
+  customerAdditionalMobileNumber: 0,
+  customerEmail: '',
+  customerVerificationStatus: '',
+  customerAddress: new CustomerAddress,
+  customerFinancialData: new CustomerFinancialData,
+  dealerData: new Dealer,
+  guarantorDetails: new GuarantorDetails,
+  customerDocuments: new Documents,
+  // this is passed null from frontend
+  loanDisbursement: new LoanDisbursement,
+  ledger: new Ledger,
+  sanctionLetter: new SanctionLetter,
+  // already in data base 
+  customerCibilScore: new Cibil
+}
+
 
  
 
@@ -62,7 +90,13 @@ previousEmi:''
   //   return this.http.post("http://localhost:9095/email/sendmailwithattachment",data)
   // }
   //http://localhost:9095/email/sendmail
-  //
+
+  saveCustomer(customer:any){
+    alert("call to common service ")
+    return this.http.post("http://localhost:9090/GCappps/upload",customer)
+  }
+
+
 }
 
 
