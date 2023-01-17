@@ -2,6 +2,7 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { zip } from 'rxjs';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-loan-enquiry',
@@ -34,6 +35,17 @@ export class LoanEnquiryComponent
 
 
   customerEnquiry(){
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your Enquiry Form has been Submitted',
+      
+      showConfirmButton: true,
+      timer: Infinity
+    })
+    
+
       this.cs.enquiryDetails=this.enquiryForm.value
 this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe();    
       
@@ -61,6 +73,8 @@ this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe();
     get pancardNumber(){
       return this.enquiryForm.get('pancardNumber')
     }
+
+    
 
     
 
