@@ -1,6 +1,6 @@
 export class Installment {
-installmentId:string;
-installmentNumber;
+installmentId:number;
+installmentNumber:number;
 installmentMonth:string;
 installementPaidDate:any;
 paymentStatus:string;
