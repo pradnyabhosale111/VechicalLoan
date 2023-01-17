@@ -40,8 +40,7 @@ export class EmiCalculatorComponent {
     totalRepayment: number;
   
     public cal() {      
-      var interestPerYear = (this.loanAmount * this.interest) / 100;
-  
+      
       this.interest = this.interest / (12 * 100);
       this.emi =
         (this.loanAmount *
@@ -81,18 +80,6 @@ export class EmiCalculatorComponent {
     @ViewChild("chart") chart: ChartComponent;
     public chartOptions: Partial<ChartOptions>;
     
-    @ViewChild('container')
-  container: ElementRef;
-
-  signIn() {
-    this.container.nativeElement.classList.remove('right-panel-active');
-    
-  }
-
-  signUp() {
-    this.container.nativeElement.classList.add('right-panel-active');
-  }
-
   }
   
 

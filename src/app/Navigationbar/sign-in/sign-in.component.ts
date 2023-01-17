@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup , Validator, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,8 +20,8 @@ export class SignInComponent {
 
   ngOnInit() {
     this.loginf = this.fb.group({
-      customerEmail: [],
-      customerPassword: [],
+      customerEmail: ['',[Validators.required, Validators.email]],
+      customerPassword: ['', Validators.required],
     });
 
     this.registerf = this.fb.group({
@@ -61,5 +61,13 @@ export class SignInComponent {
 
   signUp() {
     this.container.nativeElement.classList.add('right-panel-active');
+  }
+
+  get customerEmail(){
+    return this.loginf.get('customerEmail');
+  }
+
+  get customerPassword(){
+    return this.loginf.get('customerPassword');
   }
 }

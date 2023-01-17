@@ -1,50 +1,63 @@
-<h1 align="center">Enquiry Form</h1>
-<div class="container" #container>
 
-<h1>Loan Enquiry form</h1>
+<div class="container" #container>
 <form [formGroup]="enquiryForm" (ngSubmit)="customerEnquiry()">
+  <h1 align="center" style="margin-top: 10px;">Loan Enquiry form</h1>
     
         <!-- customerid auto generation  -->
         <!-- customerEnquiryStatus  is hradcode in .ts file -->
     <div class="form-group">
       <label class="text-uppercase">FirstName :</label>
       <input type="text" formControlName="customerFirstName" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+      <span  *ngIf="customerFirstName && customerFirstName.invalid && customerFirstName.touched " style="color: red;">*Required Field</span>
     </div>
 
     <div class="form-group">
         <label class="text-uppercase">MiddleName:</label>
         <input type="text" formControlName="customerMiddleName" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+        <span *ngIf="customerMiddleName && customerMiddleName.invalid && customerMiddleName.touched" style="color: red;">*Required </span>
       </div>
 
     <div class="form-group">
         <label class="text-uppercase">LastName :</label>
         <input type="text" formControlName="customerLastName" placeholder="Enter LastName"><!-- [(ngModel)]=u.username-->
+        <span *ngIf="customerLastName && customerLastName.invalid && customerLastName.touched" style="color: red;">*Required</span>
       </div>
 
     <div class="form-group">
         <label  class="text-uppercase">Date-of-Birth :</label>
-        <input type="text" formControlName="customerDateOfBirth" placeholder="Enter Date-of-Birth.."><!-- [(ngModel)]=u.username-->
+        <input type="date" formControlName="customerDateOfBirth" placeholder="Enter Date-of-Birth.."><!-- [(ngModel)]=u.username-->
+        <span *ngIf="customerDateOfBirth && customerDateOfBirth.invalid && customerDateOfBirth.touched" style="color: red;">*Required</span>
+        
       </div>
 
       <div class="form-group">
         <label  class="text-uppercase">Email :</label>
         <input type="text" formControlName="customerEmail" placeholder="Enter Email Address"><!-- [(ngModel)]=u.username-->
+        <span *ngIf="customerEmail && customerEmail.invalid && customerEmail.touched" style="color: red;">*Required valid email</span>
       </div>
 
       <div class="form-group">
         <label  class="text-uppercase">MobileNumber :</label>
         <input type="text" formControlName="customerMobileNumber" placeholder="Enter the Mobile number"><!-- [(ngModel)]=u.username-->
+        <span *ngIf="customerMobileNumber && customerMobileNumber.invalid && customerMobileNumber.touched" style="color: red;">*Required 10 digits mobile number</span>
       </div>
 
       <div class="form-group">
         <label  class="text-uppercase">Pancard :</label>
         <input type="text" formControlName="pancardNumber" placeholder="Enter the pancard number"><!-- [(ngModel)]=u.username-->
+        <span *ngIf="pancardNumber && pancardNumber.invalid && pancardNumber.touched" style="color: red;">*Required</span>
       </div>
 
 
       <div class="form-check">
-        <button type="submit" class="btn btn-login float-right">Submit Enquiry</button>
+        <button type="submit" class="btn btn-login float-right" style="margin-right: 50%;"  [disabled]="enquiryForm.invalid">Submit Enquiry</button>
         <!--</button>(click)="login(u)">Submit</button>-->
       </div>
-
-      </form>
+      <div class="overlay-container">
+        <div class="overlay">
+         <div class="overlay-panel overlay-right">
+         </div>
+        </div>
+      </div>
+</form>
+</div>
