@@ -18,7 +18,7 @@ export class MultistepformComponent implements OnInit {
 
   CustomerRegister = this.fb.group({
     customerbasic: this.fb.group({
-      customerId: [], // field goes null
+      customerId:'', // field goes null
       enquiryId: this.fb.control('', Validators.required),
       customerFirstName: this.fb.control('', Validators.required),
       customerMiddleName: this.fb.control('', Validators.required),
@@ -28,7 +28,6 @@ export class MultistepformComponent implements OnInit {
 
       customerMobileNumber: this.fb.control(0, Validators.required),
       customerAdditionalMobileNumber: this.fb.control(0, Validators.required),
-      customerPanCard: this.fb.control('', Validators.required),
       customerEmail: this.fb.control('', Validators.required),
       //customerVerificationStatus: this.fb.control(''),// field goes null
     }),
@@ -68,7 +67,7 @@ export class MultistepformComponent implements OnInit {
 
     //form 4
     dealerData: this.fb.group({
-      dealerId: [],
+      dealerId:'',
       dealerName: this.fb.control('', Validators.required),
       dealerLocation: this.fb.control('', Validators.required),
       dealerEmail: this.fb.control('', Validators.required),
@@ -81,7 +80,7 @@ export class MultistepformComponent implements OnInit {
 
     // form 5
     guarantorDetails: this.fb.group({
-      guarantorId: this.fb.control(''),
+      guarantorId:0,
       guarantorName: this.fb.control('', Validators.required),
       guarantorRelation: this.fb.control('', Validators.required),
       guarantorMobileNumber: this.fb.control(0, Validators.required),
@@ -211,8 +210,7 @@ export class MultistepformComponent implements OnInit {
 
     this.cs.customer.dealerData = this.CustomerRegister.get('dealerData').value;
 
-    this.cs.customer.guarantorDetails =
-      this.CustomerRegister.get('guarantorDetails').value;
+    this.cs.customer.guarantorDetails = this.CustomerRegister.get('guarantorDetails').value;
 
     let data = new FormData();
 

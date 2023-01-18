@@ -55,12 +55,6 @@
           <input matInput formControlName="customerEmail" required />
         </mat-form-field>
 
-        
-        <mat-form-field appearance="outline"> 
-          <mat-label>PanCard</mat-label>         
-          <input matInput formControlName="customerPanCard" required />
-        </mat-form-field>
-
         <div>
           <button mat-raised-button color="primary" matStepperNext type="button">Next</button>
         </div>
@@ -399,10 +393,7 @@
         <mat-list-item>
           <strong>ADDITIONAL MOBILE NO:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerAdditionalMobileNumber }}</mat-list-item>
-        <mat-list-item>
-          <strong>PANCARD:</strong>
-          <strong>First Name:</strong>{{this.CustomerRegister.value.customerbasic.customerPanCard}}</mat-list-item>
-        <mat-list-item>
+      <mat-list-item>
           <strong>EMAIL:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerEmail }}</mat-list-item>
         <mat-list-item>

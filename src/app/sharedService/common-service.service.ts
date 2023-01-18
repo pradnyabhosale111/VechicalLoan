@@ -37,7 +37,6 @@ export class CommonServiceService {
 
 
 public customer:Customer={
-  customerId: undefined,
   enquiryId: '',
   customerFirstName: '',
   customerMiddleName: '',
@@ -58,7 +57,8 @@ public customer:Customer={
   ledger: new Ledger,
   sanctionLetter: new SanctionLetter,
   // already in data base 
-  customerCibilScore: new Cibil
+  customerCibilScore: new Cibil,
+  customerId: undefined
 }
 
 
@@ -94,6 +94,12 @@ public customer:Customer={
   saveCustomer(customer:any){
     alert("call to common service ")
     return this.http.post("http://localhost:9090/GCappps/upload",customer)
+  }
+
+  // data for the oe 
+  getApplicationList(status:string){
+    alert("Application list")
+    return this.http.get("http://localhost:9090/GCappps/getAllCustomer/"+status)
   }
 
 

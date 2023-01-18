@@ -1,49 +1,34 @@
-<!-- 
- customerId: '',
- enquiryId: '',
- FirstName: '',
- cutomerMiddleName: '',
- customerLastName: '',
- customerDateOfBirth: '',
- customerGender: '',
- cutomerMobileNumber: 0,
- cutomerAdditionalMobileNumber: 0,
- customerEmail: '',
- customerVerificationStatus: '',
- customerAddress: new CustomerAddress,
- customerFinancialData: new CustomerFinancialData,
- dealerData: new Dealer,
- guarantorDetails: new GuarantorDetails,
- customerDocuments: new Documents,
+<div>  
+      <input type="button" class="buttonclass1" value="Pending Application List" (click)="getAppliedList()">   
+</div>
 
-
-
-<table class="table">
-    <tr>
+ <section><!--disabled={{trigger}} -->
+<table class="table" >
+    <tr><!--10 entities-->
       <th scope="col">customer Id</th>
       <th scope="col">Enquiry Id</th>
       <th scope="col">First Name</th>
       <th scope="col">MiddleName</th>
-      <th scope="col">LastName</th>
-      <th scope="col">Cibil Status</th>
-      <th scope="col">Application Status</th>
+      <th scope="col">LastName</th> 
       <th scope="col">MobileNumber</th>     
-      <th scope="col">Email</th>      
+      <th scope="col">Email</th>  
+      <th scope="col">Application Status</th>
+      <th scope="col">Cibil Status</th>    
       <th scope="col">Action</th>
-     
-
     </tr>
     <tr *ngFor="let singlecustomer of customerdatalist">
-      <td>{{singlecustomer.stuId}}</td>
-      <td>{{singlecustomer.}}</td>
-      
-    
-      <td><img [src]="'data:image/jpeg;base64,'+item.photo" height="70"></td>
-      <td><img [src]="'data:image/jpeg;base64,'+item.adharCard" height="70"></td>
+      <td>{{singlecustomer.customerId}}</td>
+      <td>{{singlecustomer.enquiryId}}</td>      
+      <td>{{singlecustomer.customerFirstName}}</td>
+      <td>{{singlecustomer.customerMiddleName}}</td>
+      <td>{{singlecustomer.customerLastName}}</td>
+      <td>{{singlecustomer.cutomerMobileNumber}}</td>
+      <td>{{singlecustomer.customerEmail}}</td>
+      <td>{{singlecustomer.customerCibilScore.cibilScore}}</td>
+      <td>{{singlecustomer.customerVerificationStatus}}</td>      
       <td><button type="button" class="fa fa-download" style="font-size:25px;color:red"
-          (click)="makepdf(item.photo)">Download photo</button></td>
-      <td><button type="button" class="fa fa-download" style="font-size:25px;color:red"
-          (click)="makepdf(item.adharCard)">Download Adhar</button></td>
+          (click)="showApplicationData(singlecustomer)">Check Application</button></td>
 
     </tr>
-  </table> -->
+  </table>
+</section>

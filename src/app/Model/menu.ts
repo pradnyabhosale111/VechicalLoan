@@ -7,7 +7,9 @@ export class Menu {
             {key: "viewenquiries", label: "View Enquiery Details" }
         ],
          OExecutive:[
-            {key: "viewenquiries", label: "View Enquiery Details" }
+            {key: "vieweApplication", label: "View Enquiery Details" },
+         //   {key:"showApplication", label:"Check applicaton" }          
+  
         ],
         User:[
             {key: "applicationform", label: "Application form" }

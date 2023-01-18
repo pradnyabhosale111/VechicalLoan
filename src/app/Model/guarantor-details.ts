@@ -1,6 +1,6 @@
 export class GuarantorDetails {
 
-guarantorId:string;
+guarantorId:number;
 guarantorName:string;
 guarantorRelation:string;
 guarantorMobileNumber:number;

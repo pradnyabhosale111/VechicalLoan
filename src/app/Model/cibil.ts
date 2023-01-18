@@ -1,8 +1,11 @@
 export class Cibil {
+
+
 cibilId:string;                                      
-cibilScore:string;                                     
-cibilGeneratedDateTime:string;                                 
+cibilScore:number;                                     
+cibilGeneratedDateTime:any;                                 
 remark:string;                                      
-previousEmi:string;                          
+previousEmi:number;   
+
 
 }
