@@ -3,9 +3,8 @@ export class Cibil {
 
 cibilId:string;                                      
 cibilScore:number;                                     
-cibilGeneratedDateTime:any;                                 
+cibilGeneratedDate:any;                                 
 remark:string;                                      
-previousEmi:number;   
-
+previousEmi:number;                          
 
 }

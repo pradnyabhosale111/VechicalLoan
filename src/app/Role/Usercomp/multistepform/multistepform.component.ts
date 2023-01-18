@@ -2,6 +2,7 @@ import { Component, OnInit,  } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-multistepform',
@@ -225,5 +226,17 @@ export class MultistepformComponent implements OnInit {
 
     this.cs.saveCustomer(data).subscribe();
     alert('saved');
+
+    // alert when form is submitted
+    
+    // Swal.fire({
+    //   position: 'center',
+    //   icon: 'success',
+    //   title: 'Your Enquiry Form has been Submitted',
+      
+    //   showConfirmButton: true,
+    //   timer: Infinity
+    // })
+
   }
 }

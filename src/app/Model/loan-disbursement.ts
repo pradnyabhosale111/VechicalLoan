@@ -1,7 +1,7 @@
 export class LoanDisbursement {
 loanId:string;
 totalAmount:number;
-dealarAccountNumber:string;
+dealarAccountNumber:number;
 dealerIFSCCode:string;
 amountPaidDate:any;
 
