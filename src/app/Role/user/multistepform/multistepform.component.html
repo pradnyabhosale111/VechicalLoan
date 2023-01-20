@@ -4,12 +4,13 @@
 
       <div formGroupName="customerbasic">
         <ng-template matStepLabel>Fill Basic Details</ng-template>
-
+        
+        
         <mat-form-field appearance="outline">     
           <mat-label>Enquiry Id</mat-label>     
           <input matInput formControlName="enquiryId" required />
         </mat-form-field> 
-
+     
         <mat-form-field appearance="outline">     
           <mat-label>First Name</mat-label>     
           <input matInput formControlName="customerFirstName" required />
@@ -27,16 +28,26 @@
           <input matInput formControlName="customerLastName" required />
         </mat-form-field>
 
-        <mat-form-field appearance="outline">  
+        <!-- <mat-form-field appearance="outline">  
           <mat-label>Date of Birth</mat-label>        
           <input type="date" matInput formControlName="customerDateOfBirth" required />
-        </mat-form-field>
-
-        <!-- radio button adding here  -->
+        </mat-form-field> -->
         <mat-form-field appearance="outline">
-          <mat-label>Gender</mat-label>          
-          <input matInput formControlName="customerGender" required />
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="picker"  formControlName="customerDateOfBirth" required >
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
+        
+      
+          <mat-label>Gender:</mat-label>          
+  <!-- <input matInput formControlName="customerGender" required />  -->
+      <mat-radio-group formControlName="customerGender">
+          <mat-radio-button value="female" >Female</mat-radio-button>
+          <mat-radio-button value="male">Male</mat-radio-button>
+        </mat-radio-group>
+   
 
         
         <mat-form-field appearance="outline">  
@@ -57,9 +68,9 @@
         </mat-form-field>
 
         <div>
-          <button mat-raised-button color="primary" matStepperNext type="button">Next</button>
+          <button  class="button-close" mat-raised-button color="primary" matStepperNext type="button">Next</button>
         </div>
-      </div>
+</div>
     </mat-step>
 
 
@@ -292,7 +303,7 @@
 
             
             <mat-form-field appearance="outline">    
-              <mat-label>Name</mat-label>             
+              <mat-label>Guarantor Name</mat-label>             
               <input matInput formControlName="guarantorName" required />
             </mat-form-field>
 
@@ -376,27 +387,27 @@
           <strong>First Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerFirstName }}</mat-list-item>
         <mat-list-item>
-          <strong>MIDDLE Name:</strong>
+          <strong>Middle Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerMiddleName }}</mat-list-item>
         <mat-list-item>
-          <strong>LAST Name:</strong>
+          <strong>Last Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerLastName }}</mat-list-item>
         <mat-list-item>
-          <strong>DATE OF BIRTH :</strong>{{this.CustomerRegister.value.customerbasic.customerDateOfBirth}}</mat-list-item>
+          <strong>Date Of Birth :</strong>{{this.CustomerRegister.value.customerbasic.customerDateOfBirth}}</mat-list-item>
         <mat-list-item>
-          <strong>GENDER:</strong>
+          <strong>Gender :</strong>
           {{ this.CustomerRegister.value.customerbasic.customerGender }}</mat-list-item>
         <mat-list-item>
-          <strong>MOBILE NUMBER:</strong>
+          <strong>Mobile Number:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerMobileNumber }}</mat-list-item>
         <mat-list-item>
-          <strong>ADDITIONAL MOBILE NO:</strong>
+          <strong>Additional Mobile Number:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerAdditionalMobileNumber }}</mat-list-item>
       <mat-list-item>
-          <strong>EMAIL:</strong>
+          <strong>Email:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerEmail }}</mat-list-item>
         <mat-list-item>
-          <ng-template matStepLabel>Local ADDRESS DETAILS :</ng-template>
+          <ng-template matStepLabel>Local Address Details :</ng-template>
           <strong>First Name:</strong>
           {{ this.CustomerRegister.value.customerAddress.localHouseNumber }}</mat-list-item>
         <h3>Local Address Details</h3>

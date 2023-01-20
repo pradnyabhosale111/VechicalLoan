@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EnquiryDetails } from 'src/app/Model/EnquiryDetails';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-show-enquiries',
@@ -41,6 +42,13 @@ showme=false;
 this.cs.cibilScoreCheck(enquiryDetails).subscribe(()=>{
 
 window.location.reload();
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Cibil Score has Been Successfully Checked',
+  showConfirmButton: true,
+  timer: 1500
+})
 
 });
  }
@@ -52,6 +60,15 @@ window.location.reload();
 
   );
   window.location.reload();
+
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Mail has been sent to Customer',
+    showConfirmButton: true,
+    timer: 1500
+  })
+  
  }
 
 

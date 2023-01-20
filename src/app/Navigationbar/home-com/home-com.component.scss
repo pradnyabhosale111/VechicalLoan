@@ -16,7 +16,9 @@ body {
     background:#FFFFFF;
     text-align:center;
     padding:20px;
-    border: solid 1px #cccccc;
+
+    
+   
 }
 .feature p {
     margin-top:20px;   
@@ -27,10 +29,10 @@ body {
 .feature i{
     font-size:80px;
     color:#FFFFFF;
-    background:#3d2385;
+    background:#080079;
     padding:30px;
     border-radius:50%;
-    border: solid 3px #3d2385;
+    border: solid 3px #080079;
 }
 .feature h3 {
     color:black;
@@ -64,12 +66,29 @@ body {
     margin-top: 12px;
     margin-bottom: 8px;
 }
-img{
-    margin: 35px;
-    margin-bottom: 10px;  
-    text-align: center;    
-    width: 200px;    
-    padding: 30px;  
+h1{
+    font-size: 16px;
+}
+.card{
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: none;
+
+}
+.container{  
     
-    height: 200px; 
   }
+ 
+    img{
+        margin: 35px;
+        margin-bottom: 10px;  
+        text-align: center;    
+        width: 200px;    
+        padding: 30px;  
+        filter:color #080079;
+        height: 200px; 
+      }
+  

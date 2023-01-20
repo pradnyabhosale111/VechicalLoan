@@ -7,19 +7,19 @@
         <!-- customerEnquiryStatus  is hradcode in .ts file -->
     <div class="form-group">
       <label class="text-uppercase">FirstName :</label>
-      <input type="text" formControlName="customerFirstName" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+      <input type="text" formControlName="customerFirstName" placeholder=" Enter First Name">
       <span  *ngIf="customerFirstName && customerFirstName.invalid && customerFirstName.touched " style="color: red;">*Required Field</span>
     </div>
 
     <div class="form-group">
         <label class="text-uppercase">MiddleName:</label>
-        <input type="text" formControlName="customerMiddleName" placeholder="firstname"><!-- [(ngModel)]=u.username-->
+        <input type="text" formControlName="customerMiddleName" placeholder="Enter Middle Name">
         <span *ngIf="customerMiddleName && customerMiddleName.invalid && customerMiddleName.touched" style="color: red;">*Required </span>
       </div>
 
     <div class="form-group">
         <label class="text-uppercase">LastName :</label>
-        <input type="text" formControlName="customerLastName" placeholder="Enter LastName"><!-- [(ngModel)]=u.username-->
+        <input type="text" formControlName="customerLastName" placeholder="Enter Last Name">
         <span *ngIf="customerLastName && customerLastName.invalid && customerLastName.touched" style="color: red;">*Required</span>
       </div>
 
@@ -38,13 +38,13 @@
 
       <div class="form-group">
         <label  class="text-uppercase">MobileNumber :</label>
-        <input type="text" formControlName="customerMobileNumber" placeholder="Enter the Mobile number"><!-- [(ngModel)]=u.username-->
+        <input type="text" formControlName="customerMobileNumber" placeholder="Enter Mobile Number"><!-- [(ngModel)]=u.username-->
         <span *ngIf="customerMobileNumber && customerMobileNumber.invalid && customerMobileNumber.touched" style="color: red;">*Required 10 digits mobile number</span>
       </div>
 
       <div class="form-group">
         <label  class="text-uppercase">Pancard :</label>
-        <input type="text" formControlName="pancardNumber" placeholder="Enter the pancard number"><!-- [(ngModel)]=u.username-->
+        <input type="text" formControlName="pancardNumber" placeholder="Enter Pancard Number"><!-- [(ngModel)]=u.username-->
         <span *ngIf="pancardNumber && pancardNumber.invalid && pancardNumber.touched" style="color: red;">*Required</span>
       </div>
 

@@ -103,7 +103,7 @@ body { padding: 30px; }
     
     .can-toggle__switch {
       transition: background-color 0.3s $can-toggle-transition;
-      background: lighten($can-toggle-off-color, 10%);
+      background: lighten($can-toggle-off-color, 5%);
       &:before { color: $can-toggle-inactive-text; }
       &:after {
         // Autoprefixer choked here, so making the prefixes explicit
@@ -118,15 +118,15 @@ body { padding: 30px; }
 
 @mixin can-toggle-appearance 
 ( 
-  $can-toggle-width: 300px,
-  $can-toggle-height: 50px,
-  $can-toggle-border-radius: 20px,
+  $can-toggle-width: 134px,
+  $can-toggle-height: 36px,
+  $can-toggle-border-radius: 4px,
   $can-toggle-offset: 2px,
-  $can-toggle-label-font-size: 20px,
-  $can-toggle-switch-font-size: 14px,
+  $can-toggle-label-font-size: 14px,
+  $can-toggle-switch-font-size: 12px,
   $can-toggle-shadow: 0 3px 3px rgba(black, 0.4)
 ){
-  $can-toggle-switch-width: $can-toggle-width/2;// movment size out of ttal size
+  $can-toggle-switch-width: $can-toggle-width/2;
   
   input[type="checkbox"] {
 
@@ -168,7 +168,7 @@ body { padding: 30px; }
       
       &:after {
         top: $can-toggle-offset; left: $can-toggle-offset;
-        border-radius: $can-toggle-border-radius/6;
+        border-radius: $can-toggle-border-radius/2;
         width: $can-toggle-switch-width - $can-toggle-offset; 
         line-height: $can-toggle-height - ($can-toggle-offset*2);
         font-size: $can-toggle-switch-font-size;
@@ -214,9 +214,9 @@ body { padding: 30px; }
         }
       }
       
-      // &:focus, &:hover {
-      //   ~ label {
-      //   } 
+      &:focus, &:hover {
+        ~ label {
+        } 
       }
     }
   }
@@ -227,10 +227,8 @@ body { padding: 30px; }
     display: flex;
     align-items: center;
     
-    
     .can-toggle__label-text { 
       flex: 1;
-    //  width: 100%;
       padding-left: 32px;
     }
     
@@ -243,7 +241,6 @@ body { padding: 30px; }
         top: 0;
         text-transform: uppercase;
         text-align: center;
-        width: 100%;
       }
       
       &:after {
@@ -265,11 +262,11 @@ body { padding: 30px; }
   @include can-toggle-appearance; 
   
   // Create toggles of different sizes by overriding the can-toggle-appearance mixin defaults
-  .can-toggle--size-small {
+  &.can-toggle--size-small {
     @include can-toggle-appearance
     (
-      30px, // Toggle width
-      35px,  // Toggle height
+      90px, // Toggle width
+      28px,  // Toggle height
       2px,   // Toggle border radius
       1px,   // Offset (distance btw switch and box)
       13px,  // Label font size
@@ -277,7 +274,7 @@ body { padding: 30px; }
       0 2px 2px rgba(black, 0.4) // Switch shadow on hover/focus
     ); 
   }
-
+}
 // this for the container
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -292,4 +289,35 @@ body { padding: 30px; }
 .container {
   padding: 2px 16px;
   width: 100%;
+}
+.button-close{
+  justify-self: right;
+  font-size: 15px;
+  border: none;
+  height: 40px;
+  // background-color: #FFFFFF;
+  outline: none;
+  color: #ffffff;
+  margin-top: 10px;
+  &:hover {
+      cursor: pointer;
+  }
+}
+.box{
+  max-width: 500px;
+ 
+  margin: 2em auto;
+  text-align: center;
+}
+.form-group{
+margin-left: 10px;
+margin-right: 10px;
+padding: 30px;
+width: 45%;
+}
+.row{
+  padding-bottom: 15px;
+}
+.can-toggle__switch{
+padding: 7px 8px;
 }

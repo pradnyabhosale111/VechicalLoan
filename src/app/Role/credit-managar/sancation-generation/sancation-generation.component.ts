@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Customer } from 'src/app/Model/customer';
 import { SanctionLetter } from 'src/app/Model/sanction-letter';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-sancation-generation',
   templateUrl: './sancation-generation.component.html',
@@ -105,6 +106,26 @@ export class SancationGenerationComponent {
   // for  only the sanction letter update (new api for sanction update)
   generatesanctionletter(){
   alert("saveSanctionLetter from")
+
+  //alert for genrating Sanction Letter
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, Genrate Sanction Letter!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Genrated!',
+        'Sanction letter has been sent to Customer',
+        'success'
+      )
+    }
+  })
+
   this.cs.sanctionobj=this.sanctionLetterForm.value
   this.cs.generatesanctionletter(this.cs.sanctionobj,this.customerdata.customerId).subscribe(()=>{
 

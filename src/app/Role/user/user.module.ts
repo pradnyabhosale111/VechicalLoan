@@ -12,8 +12,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import { MultistepformComponent } from './multistepform/multistepform.component';
 import { ShowStatusComponent } from './show-status/show-status.component';
-
-
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 export const Userrouting: Routes = [
   { path: 'applicationform', component: MultistepformComponent },
@@ -33,6 +33,8 @@ export const Userrouting: Routes = [
     ReactiveFormsModule,
     MatListModule,
     MatCheckboxModule,
+    MatRadioModule,
+    MatDatepickerModule,
     MatCardModule
     
     

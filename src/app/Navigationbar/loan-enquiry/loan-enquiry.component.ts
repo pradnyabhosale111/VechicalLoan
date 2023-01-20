@@ -40,16 +40,6 @@ export class LoanEnquiryComponent
 
 
   customerEnquiry(){
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Your Enquiry Form has been Submitted',
-      
-      showConfirmButton: true,
-      timer: 20
-      
-    })
-
       this.cs.enquiryDetails=this.enquiryForm.value
     this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe(); 
    
@@ -80,6 +70,8 @@ export class LoanEnquiryComponent
     get monthlyIncome(){
       return this.enquiryForm.get('monthlyIncome')
     }
+
+    
 
     
 

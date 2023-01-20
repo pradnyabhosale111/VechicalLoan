@@ -6,7 +6,8 @@
 
 
 mat-toolbar {
-    background: #3d2385;
+    background: #080079;
+  //  background: #2b6777;
     color: white;
   }
   
@@ -14,7 +15,7 @@ mat-toolbar {
     margin: 16px;
     width: 200px;
     border-right: none;
-    background: #3d2385;
+    background: #080079c7;// second
     color: white;
     border-radius: 10px;
     padding: 0px;
@@ -45,7 +46,7 @@ mat-toolbar {
       font-size: 0.8rem;
       text-decoration: none;
       color: white;
-      background-color: #080079;
+      background-color: #69c8f3c7;
   
     mat-icon {
       margin-left: 8px;
@@ -54,18 +55,23 @@ mat-toolbar {
   
   .log-button{
       width:90px;
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 70%;
+  
       display: flex;
       align-items: center;
       justify-content: flex-start;
       font-size: 0.9rem;
       color: #f2f4f8;
       
-      background-color: #080079;
+      background-color:#080079 ;
       mat-icon {
           margin-left: 0px;
         }
+        &:hover {
+          background-color: #69c8f3c7;
+          cursor: pointer;
+          color: #ffffff;
+      };
   
   }
   
