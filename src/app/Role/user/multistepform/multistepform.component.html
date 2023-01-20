@@ -461,7 +461,7 @@
           Back
         </button>
         |
-        <button mat-raised-button color="accent" matStepperNext>Submit</button>
+        <button mat-raised-button color="accent" matStepperNext [disabled]="CustomerRegister.invalid">Submit</button>
       </div>
     </mat-step>
   </mat-stepper>
