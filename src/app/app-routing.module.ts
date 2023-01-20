@@ -21,7 +21,13 @@ const routes: Routes = [
     },            
     {
       path: 'User', loadChildren: () => UserModule
-    }    
+    },
+    {
+      path: 'Cmanager', loadChildren: () => CreditManagarModule
+    },   
+     {
+      path: 'acManager', loadChildren: () => AccountManagerModule
+    }
   ]
 },
   { path: 'termsAndCondition',component:TearmsAndConditionComponent
