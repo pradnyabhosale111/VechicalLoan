@@ -1,1 +1,50 @@
-<p>ledgerdata works!</p>
+
+  <div>  
+    <ul>      
+      <li><input type="button" class="buttonclass1" value="Ledger Disbursment List" (click)="loanDisburseList()"></li>
+      <li><input type="button" class="buttonclass1" value="Ledger Disbursment List" (click)="ledgerGenratedList()"></li>
+      <li><input type="button" class="buttonclass1" value="Defualter List" (click)="defaulterList()"></li>
+    </ul>
+
+
+<table class="table" >
+  <thead class="heading">
+    <tr><!--10 entities-->        
+      <th scope="col">customer Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">MiddleName</th>
+      <th scope="col">LastName</th> 
+      <th scope="col">MobileNumber</th>     
+      <th scope="col">Email</th> 
+      <th scope="col">Amount Sanctioned</th> 
+      <th scope="col">Emi</th> 
+      <th scope="col">Tenure</th> 
+      <th scope="col">Account Number</th> 
+      <th scope="col">IFSCCode</th>       
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let singlecustomer of customerdatalist">
+      <td>{{singlecustomer.customerId}}</td>
+      <td>{{singlecustomer.enquiryId}}</td>      
+      <td>{{singlecustomer.customerFirstName}}</td>
+      <td>{{singlecustomer.customerMiddleName}}</td>
+      <td>{{singlecustomer.customerLastName}}</td>
+      <td>{{singlecustomer.cutomerMobileNumber}}</td>
+      <td>{{singlecustomer.customerEmail}}</td>
+      <td>{{singlecustomer.sanctionLetter.loanAmountSanctioned}}</td>
+      <td>{{singlecustomer.sanctionLetter.monthlyEmiAmount}}</td>
+      <td>{{singlecustomer.sanctionLetter.loanTenure}}</td>
+      <td>{{singlecustomer.dealerData.accountNumber}}</td>
+      <td>{{singlecustomer.dealerData.accountIFSCCode}}</td>     
+      <td><button type="button" class="fa fa-download" style="font-size:25px;color:red"
+          (click)="ledgerGenration(singlecustomer.customerId)">Check Application</button></td>
+      <td><button type="button" class="fa fa-download" style="font-size:25px;color:red"
+            (click)="CheckInstallMent(singlecustomer.customerId)">Check Application</button></td>
+       
+     </tr>
+  </tbody> 
+  </table>
+
+</div>
