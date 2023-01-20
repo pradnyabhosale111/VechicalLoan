@@ -110,8 +110,8 @@ public customer:Customer={
   }
 
   // single data for customer to track their application 
-  getSingleCustomer(customerId:number){
-    return this.http.get("http://localhost:9090/GCappps/getSingleCustomer/"+customerId);
+  getSingleCustomer(customerId:string){
+    return this.http.get("http://localhost:9090/GCappps/getcustomerbyid/"+customerId);
   }
 
    //-------------------------------------------------------- OE call ----------------------------------------------------
