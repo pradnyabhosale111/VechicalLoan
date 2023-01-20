@@ -16,10 +16,10 @@ import { SanctionLetter } from '../Model/sanction-letter';
 @Injectable({
   providedIn: 'root'
 })
-export class CommonServiceService {
-  
 
-  constructor(private http:HttpClient) { }
+export class CommonServiceService {
+ 
+constructor(private http:HttpClient) { }
 
  public enquiryDetails:EnquiryDetails={
    enquiryId: '',
@@ -34,10 +34,25 @@ export class CommonServiceService {
    cibildata: new Cibil
  }
 
+public sanctionobj:SanctionLetter={
+  sanctionId: '',
+  sanctionDate: undefined,
+  applicantName: '',
+  loanAmountSanctioned: 0,
+  interestType: '',
+  rateOfInterest: 0,
+  loanTenure: 0,
+  monthlyEmiAmount: 0,
+  loanAmountWithInterest: 0,
+  modeOfPayment: '',
+
+  sanctionLetterStatus: ''
+}
+
+
 
 
 public customer:Customer={
-  customerId: undefined,
   enquiryId: '',
   customerFirstName: '',
   customerMiddleName: '',
@@ -58,11 +73,9 @@ public customer:Customer={
   ledger: new Ledger,
   sanctionLetter: new SanctionLetter,
   // already in data base 
-  customerCibilScore: new Cibil
+  customerCibilScore: new Cibil,
+  customerId: undefined
 }
-
-
- 
 
 
   customerEnquiry(enquiryDetails: EnquiryDetails) {
@@ -76,7 +89,6 @@ public customer:Customer={
     return this.http.get("http://localhost:9090/GCappps/getallenquiries/"+status)
   }
 
-
 // for re module 
 // do some task for table seen table seen 
 
@@ -85,16 +97,36 @@ public customer:Customer={
     return this.http.put("http://localhost:9090/GCappps/cibilscore/"+enquiryDetails.enquiryId,enquiryDetails)
   }
 
-  // //old 
-  // sendAttachedMail(data: FormData){
-  //   return this.http.post("http://localhost:9095/email/sendmailwithattachment",data)
-  // }
   //http://localhost:9095/email/sendmail
+  sendMail(enquiryDetails: EnquiryDetails){
+    return this.http.post("http://localhost:9095/email/sendmailwithattachment",enquiryDetails)
+  }
 
+  
   saveCustomer(customer:any){
     alert("call to common service ")
     return this.http.post("http://localhost:9090/GCappps/upload",customer)
   }
+
+  // all cuatomer Data
+  getCustomer(status:string){
+    alert("Application list")
+    return this.http.get("http://localhost:9090/GCappps/getAllCustomer/"+status)
+  }
+
+  getSingleCustomer(customerId:number){
+    return this.http.get("http://localhost:9090/GCappps/getSingleCustomer/"+customerId);
+  }
+
+  // customer updated with snction data
+  saveSanctionLetter(customerdata: Customer) {
+    return this.http.put("http://localhost:9090/GCappps/generatesanctionletter/"+customerdata.customerId,customerdata);
+    }
+
+    // save sanction with secondary 
+    secondSaveSanctionLetter(customerId:string,sanctionobj:SanctionLetter) {
+      return this.http.put("http://localhost:9090/GCappps/generatesanctionletter/"+customerId,sanctionobj);
+      }
 
 
 }

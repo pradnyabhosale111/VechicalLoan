@@ -1,0 +1,88 @@
+<mat-card class="box">
+
+    <form class="example-form" [formGroup]="sanctionLetterForm" (ngSubmit)="saveSanctionLetter()">
+        <mat-card-content>
+            <div class="row">
+                
+                <!-- <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Sanction Date</mat-label>
+                        <input matInput formControlName="sanctionDate" required />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Applicant Name</mat-label>
+                        <input matInput formControlName="applicantName" required />
+                    </mat-form-field>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Loan Amount</mat-label>
+                        <input matInput formControlName="loanAmountSanctioned" required />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>InterestType</mat-label>
+                        <input matInput formControlName="interestType" required />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Rate Of Interest</mat-label>
+                        <input matInput formControlName="rateOfInterest" required />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Tenure (Months)</mat-label>
+                        <input matInput formControlName="loanTenure" required />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>EMI</mat-label>
+                        <input matInput formControlName="monthlyEmiAmount" required />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Loan Amount With Interest</mat-label>
+                        <input matInput formControlName="loanAmountWithInterest" required />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Mode Of Payment</mat-label>
+                        <input matInput formControlName="modeOfPayment" required />
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Sanction Letter Status</mat-label>
+                        <input matInput formControlName="sanctionLetterStatus" required />
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+
+            <button class="button-save" mat-raised-button color="primary">saveSanctionLetter</button>
+
+        </mat-card-content>
+
+    </form>
+</mat-card>

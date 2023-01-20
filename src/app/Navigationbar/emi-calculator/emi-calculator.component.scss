@@ -99,10 +99,10 @@ input {
   overflow: hidden;
   width: 768px;
   max-width: 100%;
-  min-height: 480px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-bottom: 50px;
+  height: 430px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .form-container {
@@ -166,9 +166,9 @@ input {
 }
 
 .overlay {
-  background: #3d2385;
-  background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
-  background: linear-gradient(to right, #3d2385, #3d2385);
+  background:#080079;
+  // background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
+  // background: linear-gradient(to right, #3d2385, #3d2385);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -271,4 +271,86 @@ footer a {
 {
   margin-left: 20px;
   margin-right: 20px;
+}
+#features {
+  margin-top:20px;
+}
+.feature, .feature i, .feature h3, .feature .title_border {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;    
+}
+.feature {
+  background:#FFFFFF;
+  text-align:center;
+  padding:20px;
+  color: #080079;
+}
+.feature p {
+  margin-top:20px;   
+  margin-bottom:30px;   
+  font-size: 16px;
+}
+
+.feature i{
+  font-size:80px;
+  color:#FFFFFF;
+  background:#080079;
+  padding:30px;
+  border-radius:50%;
+  border: solid 3px #080079;
+}
+.feature h3 {
+  color:black;
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: large; 
+  margin-top: 15px;
+}
+.feature:hover {
+  background:#FFFFFF;
+  -webkit-transform: translate(0,3em);
+  -moz-transform: translate(0,3em);
+  -o-transform: translate(0,3em);
+  -ms-transform: translate(0,3em);
+  transform: translate(0,3em);    
+}
+.feature:hover i{
+  color: #1C82AD;
+  border-color:#0088CE;
+  background:#FFFFFF;
+}
+.feature:hover .title_border {
+  background-color:#1C82AD;
+  width:50%;
+}
+.feature .title_border {
+  width: 0%;
+  height: 3px;
+  color: #0088CE;
+  background:#0088CE;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+
+
+  .input-btn{
+    justify-self: right;
+    font-size: 15px;
+    border: none;
+    background-color: #69c8f3c7;
+    // height: 40px;
+    // margin: 50px;
+    // background-color: #FFFFFF;
+    outline: none;
+    color: #0c0b0b;
+    margin-top: 10px;
+    &:hover {
+        background-color: #080079;
+        cursor: pointer;
+        color: #ffffff;
+    };
+
 }

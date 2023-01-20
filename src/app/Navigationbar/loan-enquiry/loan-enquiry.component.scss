@@ -54,17 +54,23 @@ a {
 }
 
 button {
-  border-radius: 20px;
-  border: 1px solid #080079;
-  background-color: #080079;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-  margin-top: 15px;
+
+    justify-self: right;
+    font-size: 20px;
+    border: none;
+    background-color: #69c8f3c7;
+    height: 40px;
+    border-radius: 20px;
+    margin: 50px;
+    // background-color: #FFFFFF;
+    outline: none;
+    color: #0c0b0b;
+    margin-top: 10px;
+    &:hover {
+        background-color: #080079;
+        cursor: pointer;
+        color: #ffffff;
+    };
 }
 
 button:active {
@@ -97,7 +103,9 @@ input {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  border-radius: 10px;
 }
+
 
 .container {
   background-color: #fff;
@@ -177,9 +185,9 @@ input {
 }
 
 .overlay {
-  background: #3d2385;
-  background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
-  background: linear-gradient(to right, #3d2385, #3d2385);
+  background: #080079;
+  // background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
+  // background: linear-gradient(to right, #3d2385, #3d2385);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

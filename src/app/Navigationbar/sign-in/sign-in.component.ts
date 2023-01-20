@@ -54,7 +54,14 @@ export class SignInComponent {
       alert('welcome RExecutive');
       localStorage.setItem('role', 'RExecutive');
       this.router.navigateByUrl('dashboardlayout/RExecutive');
-    } else {
+    } else if (
+      this.loginf.get('customerEmail').value === 'cm' &&
+      this.loginf.get('customerPassword').value === 'cm123'
+    ) {
+      alert('welcome Credit Manager');
+      localStorage.setItem('role', 'Cmanager');
+      this.router.navigateByUrl('dashboardlayout/Cmanager');
+  } else {
       alert('invalid credetials ...!!!!');
     }
   }

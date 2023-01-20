@@ -1,0 +1,139 @@
+<div class="card">
+  <div class="container">
+
+    <form class="example-form" [formGroup]="customerInfo" (ngSubmit)="getSingleCustomer()">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Application Id</mat-label>
+            <input matInput formControlName="customerId" required />
+          </mat-form-field>
+        </div>
+        <!-- <div class="col-md-4">
+          <input class="button" type="submit" value="checkStatus" class="button-close" mat-raised-button
+            color="primary">
+        </div> -->
+
+        <button class="button-close" mat-raised-button color="primary">checkStatus</button>
+
+      </div>
+    </form>
+
+    <div class="col-md-4" *ngIf="showme">
+      <mat-label>Application Status :</mat-label>
+      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Applied'" class="Applied">Your Application is Within
+        Inprocess</h3>
+      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Verified'" class="Verified">Document Verified and
+        Application In
+        Further Process</h3>
+      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Rejected'" class="Rejected">Sorry Your Appliction is
+        Rejected Contact Out Near Branch</h3>
+      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Sanction_Genetrated'" class="sanctioned">Sanction
+        Letter Send On Your Mail Check data blelow </h3>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="showme">
+
+
+
+    <div class="container">
+      <!-- *ngIf="customerdetails.customerVerificationStatus === 'Sanction_Genetrated'"> -->
+
+      <form [formGroup]="loginform" (ngSubmit)="login()">
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="exampleInputEmail1" class="text-uppercase">Sanctioned Date :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.sanctionDate}}" aria-label="readonly input example"
+              readonly />
+          </div>
+
+          <div class="col-md-6">
+            <label for="eform-groupxampleInputPassword1" class="text-uppercase">Loan Offer : :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.loanAmountSanctioned}}"
+              aria-label="readonly input example" readonly />
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="exampleInputPassword1" class="text-uppercase">Interest Type :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.interestType}}" aria-label="readonly input example"
+              readonly />
+          </div>
+
+
+          <div class="col-md-6">
+
+
+            <label for="exampleInputPassword1" class="text-uppercase">Rate of Interest :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.rateOfInterest}}" aria-label="readonly input example"
+              readonly />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="exampleInputPassword1" class="text-uppercase">Tenure :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.loanTenure}}" aria-label="readonly input example"
+              readonly />
+          </div>
+
+          <div class="col-md-6">
+
+
+            <label for="exampleInputPassword1" class="text-uppercase">Emi :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.monthlyEmiAmount}}" aria-label="readonly input example"
+              readonly />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="exampleInputPassword1" class="text-uppercase">Amount to paid :</label>
+            <input type="text" class="form-control form-control-lg"
+              formControlName="{{customerdetails.sanctionLetter.loanAmountWithInterest}}"
+              aria-label="readonly input example" readonly />
+
+
+          </div>
+        </div>
+      
+          <div class="can-toggle">
+            <input id="a" type="checkbox" checked data-size="large">
+            <label for="a">
+              <div class="can-toggle__switch" data-checked="Accept the Offer" data-unchecked="Reject the Offer"></div>
+            </label>
+            
+  
+        </div>
+
+        
+        <label for="taccheck" class="tacbox">
+          <input id="taccheck" type="checkbox" />
+          I agree to these <a routerLink="termsAndCondition">Terms and Conditions</a>.
+        </label>
+
+        
+
+        <div class="row">
+          <div class="form-check">
+            <button type="submit" class="btn btn-login float-right">Login</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
