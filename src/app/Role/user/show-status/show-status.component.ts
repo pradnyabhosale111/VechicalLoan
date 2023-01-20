@@ -54,12 +54,11 @@ this.customerInfo=this.fb.group({
       this.cs.getSingleCustomer(this.customerInfo.get('customerId').value).subscribe((response:any)=>{
         this.customerdetails=response.responceData
       });
-      this.showme=true; 
-      if(this.customerdetails.customerVerificationStatus = null)  {
-        
-        window.location.reload();
-        
-       } 
+      if(this.customerdetails.customerVerificationStatus = null)  {        
+      this.showme=false;       
+       } else{
+        this.showme=true; 
+       }
       
     
    }

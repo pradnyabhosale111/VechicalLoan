@@ -91,7 +91,7 @@ public customer:Customer={
 //--------------------------------------------------------- RE call -----------------------------------------------------------
 // RE check the cibil cibil generated and uodate in enquiry database  
   cibilScoreCheck(enquiryDetails: EnquiryDetails){
-    return this.http.put("http://localhost:9090/GCappps/cibilscore/"+enquiryDetails.enquiryId,enquiryDetails)
+    return this.http.put("http://localhost:9090/GCappps/CIBILScore/check/"+enquiryDetails.pancardNumber,enquiryDetails)
   }
 
   // Depend on cibil mail is send to Customer 
@@ -104,9 +104,9 @@ public customer:Customer={
 
   //----------------------------------------------------- Customer call ----------------------------------------------------
   //saving new application here
-  saveCustomer(customer:any){
+  saveCustomer(customer:any,enquiryId:string){
     alert("call to common service ")
-    return this.http.post("http://localhost:9090/GCappps/upload",customer)
+    return this.http.post("http://localhost:9090/GCappps/upload/"+enquiryId,customer)
   }
 
   // single data for customer to track their application 
@@ -124,8 +124,9 @@ public customer:Customer={
   //-------------------------------------------------------- CM call ----------------------------------------------------
 
     // save sanction with secondary by CM 
-    generatesanctionletter(customerId:string,sanctionobj:SanctionLetter) {
-      return this.http.put("http://localhost:9090/GCappps/generatesanctionletter/"+customerId,sanctionobj);
+    generatesanctionletter(sanctionobj:SanctionLetter,customerId:string) {
+      alert("sanction letter")
+      return this.http.post("http://localhost:9090/GCappps/generatesanctionletter/"+customerId,sanctionobj);
       }
   //----------------------------------------------- Common call for get customerlist----------------------------------------------------
   // all cuatomer Data depend on Status
@@ -133,6 +134,21 @@ public customer:Customer={
     alert("Application list")
     return this.http.get("http://localhost:9090/GCappps/getAllCustomer/"+status)
   }
+
+  //-------------------------------------------------------- AM call ----------------------------------------------------
+
+    // save loan disbursement secondary by AM 
+    loandisbursement(loanDisbursementStatus:String,customerId:string) {
+      alert("loandisbursement letter")
+      return this.http.post("http://localhost:9090/GCappps/loandisburse/"+customerId,loanDisbursementStatus);
+      }
+
+      ledgerGenration(loanDisbursementStatus:String,customerId:string) {
+        alert("loandisbursement letter")
+        return this.http.post("http://localhost:9090/GCappps/loandisburse/"+customerId,loanDisbursementStatus);
+        }
+ 
+      
  
 
   // // customer updated with snction data
