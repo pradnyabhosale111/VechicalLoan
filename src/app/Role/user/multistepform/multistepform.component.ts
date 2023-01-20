@@ -232,7 +232,7 @@ export class MultistepformComponent implements OnInit {
     data.append('incomeStatement', this.incomeStatement);
     data.append('customerData', allData);
 
-    this.cs.saveCustomer(data).subscribe();
+    this.cs.saveCustomer(data,this.cs.customer.enquiryId).subscribe();
     alert('saved');
 
     //alert when form is submitted

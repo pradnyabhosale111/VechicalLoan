@@ -164,8 +164,7 @@
 
         <div>
           <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
-          <button mat-raised-button color="accent" matStepperNext type="button">Next</button>
-         
+          <button mat-raised-button color="accent" matStepperNext type="button">Next</button>         
       </div>
       </div>
     </mat-step>
@@ -462,7 +461,7 @@
           Back
         </button>
         |
-        <button mat-raised-button color="accent" matStepperNext>Submit</button>
+        <button mat-raised-button color="accent" matStepperNext [disabled]="CustomerRegister.invalid">Submit</button>
       </div>
     </mat-step>
   </mat-stepper>

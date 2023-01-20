@@ -19,13 +19,18 @@ export class SancationGenerationComponent {
     customerInfo: FormGroup;
    public customerdata:Customer;
    public  emicheckform: FormGroup;
+
+
+   
   
   public loanOffer:number; 
    emi:number;
    tenure:number;
    intrest:number;
-   totalRepayment:number
-
+   totalRepayment:number;
+   emihtml:string;
+   totalRepaymenthtml:string;
+   
   ngOnInit() {
 
 // routed by the verfied list
@@ -92,6 +97,9 @@ export class SancationGenerationComponent {
         Math.pow(1 + this.intrest , this.tenure )) /
       (Math.pow(1 + this.intrest , this.tenure) - 1);
     this.totalRepayment = this.emi * this.tenure;
+
+    this.emihtml=this.emi.toFixed();
+    this.totalRepaymenthtml=this.totalRepayment.toFixed();
   }
 
 
@@ -119,7 +127,7 @@ export class SancationGenerationComponent {
   })
 
   this.cs.sanctionobj=this.sanctionLetterForm.value
-  this.cs.generatesanctionletter(this.customerdata.customerId,this.cs.sanctionobj).subscribe(()=>{
+  this.cs.generatesanctionletter(this.cs.sanctionobj,this.customerdata.customerId).subscribe(()=>{
 
   });
 }

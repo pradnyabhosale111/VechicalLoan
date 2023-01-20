@@ -38,4 +38,11 @@ constructor(private cs:CommonServiceService){
         });
       }
 
+
+      loandisbursement(customerId:string){
+            this.cs.loandisbursement(customerId,"Loan_Disbursed").subscribe((response:any)=>{
+        });
+      }
+
+
 }
