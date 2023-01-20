@@ -42,7 +42,13 @@ export class LoanEnquiryComponent
   customerEnquiry(){
       this.cs.enquiryDetails=this.enquiryForm.value
     this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe(); 
-   
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Enquiry Form Has Been Saved Successfully',
+      showConfirmButton: true,
+      timer: 1500
+    })
       
     }
 
@@ -70,11 +76,4 @@ export class LoanEnquiryComponent
     get monthlyIncome(){
       return this.enquiryForm.get('monthlyIncome')
     }
-
-    
-
-    
-
-    
-
 }

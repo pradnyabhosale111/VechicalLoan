@@ -1,13 +1,18 @@
-.footer{
-    position: absolute;
-    right: 0;
-    left: 0;
+#footer{
+    position: fixed;
+    //  right: 0;
+    // left: 0;
     bottom: 0;   
-    z-index: -1;
-    height: 100%;
-    width: 3px; 
+    //z-index: -1;
+   //  height: 1%;
+     width: 100%; 
     background-color: #3b3535;
-    text-align: center;
+   // text-align: center;
     color: #ce9696;
     font-weight: 200;
+   // align-items: bottom;
+   //clear: both;
+   margin-bottom: 0;
 }
+
+
