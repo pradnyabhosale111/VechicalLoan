@@ -10,7 +10,7 @@ import { SanctionLetter } from "./sanction-letter";
 
 export class Customer {   
 
-customerId;	
+customerId:string;	
 enquiryId:string;
 customerFirstName:string;
 customerMiddleName:string;

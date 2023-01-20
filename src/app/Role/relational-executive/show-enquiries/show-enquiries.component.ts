@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EnquiryDetails } from 'src/app/Model/EnquiryDetails';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-show-enquiries',
@@ -16,14 +17,13 @@ showme=false;
 
 
  pendingEnquiries(){  
-
   this.cs.customerEnquiries("Enquired").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
   })
+  this.showme=false;
  }
 
- validcibilEnquiries(){
-  
+ validcibilEnquiries(){  
   this.cs.customerEnquiries("Cibilok").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
     this.showme=true;
@@ -31,7 +31,7 @@ showme=false;
  }
 
  rejectcibilEnquiries(){
-  this.cs.customerEnquiries("CibilReject").subscribe((response:any)=>{
+  this.cs.customerEnquiries("Cibilreject").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
     this.showme=true;
   })
@@ -39,12 +39,36 @@ showme=false;
 
   
  cibilScoreCheck(enquiryDetails: EnquiryDetails){
-this.cs.cibilScoreCheck(enquiryDetails).subscribe();
+this.cs.cibilScoreCheck(enquiryDetails).subscribe(()=>{
+
+window.location.reload();
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Cibil Score has Been Successfully Checked',
+  showConfirmButton: true,
+  timer: 1500
+})
+
+});
  }
 
  sendMail(enquiryDetails: EnquiryDetails){
-  this.cs.sendMail(enquiryDetails).subscribe();
+  this.cs.sendMail(enquiryDetails).subscribe(()=>{
+    // mail sent msg 
+  }
 
+  );
+  window.location.reload();
+
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Mail has been sent to Customer',
+    showConfirmButton: true,
+    timer: 1500
+  })
+  
  }
 
 

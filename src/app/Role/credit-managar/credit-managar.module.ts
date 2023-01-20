@@ -10,10 +10,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ShowVerifiedListComponent } from './show-verified-list/show-verified-list.component';
 import { SancationGenerationComponent } from './sancation-generation/sancation-generation.component';
-import { Router, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { Customer } from 'src/app/Model/customer';
 
-export const rerouting: Routes = [
+export const cmrouting: Routes = [
   {    path:'showVerifiedList',component: ShowVerifiedListComponent},
   {    path:'sanctionGeneration',component: SancationGenerationComponent},
 ]
@@ -22,6 +22,7 @@ export const rerouting: Routes = [
   declarations:[SancationGenerationComponent,
     ShowVerifiedListComponent],
   imports: [
+    RouterModule.forChild(cmrouting),
     CommonModule,
     MatInputModule,
     MatStepperModule,
@@ -33,7 +34,7 @@ export const rerouting: Routes = [
     MatCardModule,
     MatCheckboxModule,
   ],
-  exports: [SancationGenerationComponent,
+  exports: [SancationGenerationComponent,RouterModule,
     ShowVerifiedListComponent],
 })
 export class CreditManagarModule {

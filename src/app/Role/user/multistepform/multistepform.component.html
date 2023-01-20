@@ -1,4 +1,4 @@
-<form [formGroup]="CustomerRegister" (ngSubmit)="HandleSubmit()">
+<form [formGroup]="CustomerRegister" (ngSubmit)="saveCustomer()">
   <mat-stepper [linear]="isLinear"  #stepper labelPosition="bottom">
     <mat-step [stepControl]="customerbasicform">
 
@@ -14,9 +14,9 @@
         <mat-form-field appearance="outline">     
           <mat-label>First Name</mat-label>     
           <input matInput formControlName="customerFirstName" required />
-        </mat-form-field>    
-    
-         
+        </mat-form-field>  
+        
+          
           <mat-form-field appearance="outline">
             <mat-label>Middle Name</mat-label>
           <input matInput formControlName="customerMiddleName" required />
@@ -165,8 +165,7 @@
         <div>
           <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
           <button mat-raised-button color="accent" matStepperNext type="button">Next</button>
-          <!-- <button (click)="goBack(stepper)" type="button">Back</button>  |
-          <button (click)="goForward(stepper)" type="button">Next</button> -->
+         
       </div>
       </div>
     </mat-step>
@@ -305,7 +304,7 @@
 
             
             <mat-form-field appearance="outline">    
-              <mat-label>Name</mat-label>             
+              <mat-label>Guarantor Name</mat-label>             
               <input matInput formControlName="guarantorName" required />
             </mat-form-field>
 
@@ -389,27 +388,27 @@
           <strong>First Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerFirstName }}</mat-list-item>
         <mat-list-item>
-          <strong>MIDDLE Name:</strong>
+          <strong>Middle Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerMiddleName }}</mat-list-item>
         <mat-list-item>
-          <strong>LAST Name:</strong>
+          <strong>Last Name:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerLastName }}</mat-list-item>
         <mat-list-item>
-          <strong>DATE OF BIRTH :</strong>{{this.CustomerRegister.value.customerbasic.customerDateOfBirth}}</mat-list-item>
+          <strong>Date Of Birth :</strong>{{this.CustomerRegister.value.customerbasic.customerDateOfBirth}}</mat-list-item>
         <mat-list-item>
-          <strong>GENDER:</strong>
+          <strong>Gender :</strong>
           {{ this.CustomerRegister.value.customerbasic.customerGender }}</mat-list-item>
         <mat-list-item>
-          <strong>MOBILE NUMBER:</strong>
+          <strong>Mobile Number:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerMobileNumber }}</mat-list-item>
         <mat-list-item>
-          <strong>ADDITIONAL MOBILE NO:</strong>
+          <strong>Additional Mobile Number:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerAdditionalMobileNumber }}</mat-list-item>
       <mat-list-item>
-          <strong>EMAIL:</strong>
+          <strong>Email:</strong>
           {{ this.CustomerRegister.value.customerbasic.customerEmail }}</mat-list-item>
         <mat-list-item>
-          <ng-template matStepLabel>Local ADDRESS DETAILS :</ng-template>
+          <ng-template matStepLabel>Local Address Details :</ng-template>
           <strong>First Name:</strong>
           {{ this.CustomerRegister.value.customerAddress.localHouseNumber }}</mat-list-item>
         <h3>Local Address Details</h3>

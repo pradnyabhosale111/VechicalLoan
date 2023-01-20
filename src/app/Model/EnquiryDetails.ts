@@ -10,6 +10,7 @@ export class EnquiryDetails {
     customerEmail:string;
     customerMobileNumber:number;
     pancardNumber:string;
+    monthlyIncome:number;
     enquiryStatus:string;
     cibildata:Cibil;                               
     

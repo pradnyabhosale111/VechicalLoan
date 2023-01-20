@@ -18,12 +18,9 @@ export class ShowStatusComponent
   customerdetails:Customer;
   sanctionLetterForm: FormGroup;
   customerInfo: FormGroup;
-  showme=true;
+  showme=false;
 s:SanctionLetter;
 c:any[]
-
-
-
 
 
     ngOnInit(){

@@ -13,6 +13,9 @@ import { RelationalExecutiveModule } from './Role/relational-executive/relationa
 import { UserModule } from './Role/user/user.module';
 import { OperationalExecutiveModule } from './Role/operational-executive/operational-executive.module';
 import { TearmsAndConditionComponent } from './tearms-and-condition/tearms-and-condition.component';
+import { ShowlistComponent } from './Role/account-manager/showlist/showlist.component';
+import { LedgerdataComponent } from './Role/account-manager/ledgerdata/ledgerdata.component';
+import { InstallmentDataComponent } from './Role/account-manager/installment-data/installment-data.component';
 
 @NgModule({
   declarations: [AppComponent, TearmsAndConditionComponent],

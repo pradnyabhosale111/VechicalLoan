@@ -36,6 +36,7 @@ mat-toolbar {
   }
   
   .menu-button {  
+    text-decoration: none;
     width:100%;
     display: flex;
       margin-left: 0;
@@ -98,4 +99,10 @@ mat-toolbar {
     margin-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.5);
   }
+
+  ul > li {
+    text-decoration: none;
+  }
+
+
   

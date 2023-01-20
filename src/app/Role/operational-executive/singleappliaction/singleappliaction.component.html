@@ -1,4 +1,4 @@
-<section class="h-100 h-custom gradient-custom-2">
+x<section class="h-100 h-custom gradient-custom-2">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -8,9 +8,9 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <!----------------------------------------------General information-------------------------------->
-                  <h1 class="fw-normal mb-5" style="color: #4835d4">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4">
                     General Infomation
-                  </h1>
+                  </h3>
 
                   <div class="row">
                     <div class="col-md-6 mb-4 pb-2">
@@ -39,11 +39,11 @@
                           readonly />
                         <label class="form-label" for="form3Examplev2">Mobile Number</label>
                       </div>
-                      <div class="form-outline">
+                      <!-- <div class="form-outline">
                         <input type="text" id="form3Examplev2" class="form-control form-control-lg"
                           value="{{ customerdetails.pancardNumber }}" aria-label="readonly input example" readonly />
                         <label class="form-label" for="form3Examplev2">Pancard Number</label>
-                      </div>
+                      </div> -->
 
                       <div class="col-md-6 mb-4 pb-2"></div>
                     </div>
@@ -92,9 +92,9 @@
                   </div>
 
                   <!----------------------------------------------Residential information----------------------------------------------------------------------------------------------->
-                  <h1 class="fw-normal mb-5" style="color: #4835d4">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4">
                     Permanent Address
-                  </h1>
+                  </h3>
                   <div class="row">
                     <div class="col-md-6 mb-4 pb-2">
                       <div class="form-outline">
@@ -154,9 +154,9 @@
                   <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
                   <!-- -----------------------------------------------------Guarantor Details------------------------------------------------------- -->
-                  <h1 class="fw-normal mb-5" style="color: #4835d4">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4">
                     Guarantor Details
-                  </h1>
+                  </h3>
                   <div class="row">
                     <div class="col-md-6 mb-4 pb-2">
                       <div class="form-outline">
@@ -188,7 +188,7 @@
                         <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                             customerdetails.guarantorDetails.guarantorRelation
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev3">Realation With Customer</label>
+                        <label class="form-label" for="form3Examplev3">Relation With Customer</label>
                       </div>
 
                       <div class="form-outline">
@@ -202,9 +202,9 @@
                   </div>
 
                   <!----Documents      -------------------------------------------------------------------------------------------------------------------->
-                  <h1 class="fw-normal mb-5" style="color: #4835d4">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4">
                     Documents Submitted
-                  </h1>
+                  </h3>
                   
                  
                   <div>
@@ -243,9 +243,9 @@
               </div>
               <div class="col-lg-6 bg-indigo text-white">
                 <div class="p-5">
-                  <h1 class="fw-normal mb-5" style="color: #4835d4">
+                  <h3 class="fw-normal mb-5" style="color: #4835d4">
                     Financial Information
-                  </h1>
+                  </h3>
 
                   <div class="row">
                     <div class="col-md-6 mb-4 pb-2">
@@ -253,7 +253,7 @@
                         <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.ocupationType
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">Occupation type</label>
+                        <label class="form-label" for="form3Examplev2" style="color: black">Occupation Type</label>
                       </div>
 
                       <div class="form-outline">
@@ -279,7 +279,7 @@
                       </div>
 
                       <div class="form-outline">
-                        <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.ifscCode
                           }}" aria-label="readonly input example" readonly />
                         <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
@@ -327,9 +327,9 @@
 
                     <!-- -----------------------------------------------------LOCAL ADDRESS------------------------------------------------------- -->
 
-                    <h1 class="fw-normal mb-5" style="color: #4835d4">
+                    <h3 class="fw-normal mb-5" style="color: #4835d4">
                       Local Address
-                    </h1>
+                    </h3>
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
                         <div class="form-outline">
@@ -390,9 +390,9 @@
 
                     <!------------------------------------------Dealer Information--------------------------------------------------------------------------->
 
-                    <h1 class="fw-normal mb-5" style="color: #4835d4">
+                    <h3 class="fw-normal mb-5" style="color: #4835d4">
                       Dealer Information
-                    </h1>
+                    </h3>
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
                         <div class="form-outline">
@@ -410,7 +410,7 @@
                         </div>
 
                         <div class="form-outline">
-                          <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.accountIFSCCode
                             }}" aria-label="readonly input example" readonly />
                           <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
@@ -459,8 +459,15 @@
                         <!---------------------------------------------------------------------Application Status------------------------------------------>
                         <div class="form-outline">
                           <input type="number" id="form3Examplev3" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Application Status</label>
-                        </div>
+                          <label class="form-label" for="form3Examplev3" style="color: black">Application Status</label>                      
+                        
+                        <input type="button"  class="buttonclass1" value="Application Verify" (click)="applicationVerify(customerdetails.customerId)">   
+                        <input type="button" class="buttonclass1" value="Application Reject" (click)="applicationReject(customerdetails.customerId)">  
+                      </div>
+
+
+
+
                         <!---------------------------------------------------------------------------------------------------------------->
                       </div>
                     </div>

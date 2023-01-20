@@ -61,7 +61,14 @@ export class SignInComponent {
       alert('welcome Credit Manager');
       localStorage.setItem('role', 'Cmanager');
       this.router.navigateByUrl('dashboardlayout/Cmanager');
-  } else {
+  } else if (
+    this.loginf.get('customerEmail').value === 'ac' &&
+    this.loginf.get('customerPassword').value === 'ac123'
+  ) {
+    alert('welcome Account Manager');
+    localStorage.setItem('role', 'acManager');
+    this.router.navigateByUrl('dashboardlayout/acManager');
+} else {
       alert('invalid credetials ...!!!!');
     }
   }

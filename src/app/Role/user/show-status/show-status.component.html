@@ -1,6 +1,5 @@
 <div class="card">
   <div class="container">
-
     <form class="example-form" [formGroup]="customerInfo" (ngSubmit)="getSingleCustomer()">
       <div class="row">
         <div class="col-md-4">
@@ -9,131 +8,131 @@
             <input matInput formControlName="customerId" required />
           </mat-form-field>
         </div>
-        <!-- <div class="col-md-4">
+        <div class="col-md-4">
           <input class="button" type="submit" value="checkStatus" class="button-close" mat-raised-button
-            color="primary">
-        </div> -->
-
-        <button class="button-close" mat-raised-button color="primary">checkStatus</button>
-
-      </div>
+            color="primary" />
+        </div>
+        <div class="col-md-4" *ngIf="showme">
+          <mat-label>Application Status :</mat-label>
+          <h3 *ngIf="customerdetails.customerVerificationStatus === 'Applied'" class="Applied">
+            "Your Application is Within a process"
+          </h3>
+          <h3 *ngIf="customerdetails.customerVerificationStatus === 'Verified'" class="Verified">
+            "Document is Verified and Application is in Further Process"
+          </h3>
+          <h3 *ngIf="customerdetails.customerVerificationStatus === 'Rejected'" class="Rejected">
+            "Sorry Your Appliction is Rejected at Document Verfication Contact Out Near Branch"
+          </h3>
+          <h3 *ngIf="
+              customerdetails.customerVerificationStatus === 'Sanction_Genetrated'
+            " class="sanctioned">
+            "Sanction Letter Sent On Your Mail For Accepting Offer Check Below"
+          </h3>
+        </div>
+        </div>
     </form>
 
-    <div class="col-md-4" *ngIf="showme">
-      <mat-label>Application Status :</mat-label>
-      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Applied'" class="Applied">Your Application is Within
-        Inprocess</h3>
-      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Verified'" class="Verified">Document Verified and
-        Application In
-        Further Process</h3>
-      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Rejected'" class="Rejected">Sorry Your Appliction is
-        Rejected Contact Out Near Branch</h3>
-      <h3 *ngIf="customerdetails.customerVerificationStatus === 'Sanction_Genetrated'" class="sanctioned">Sanction
-        Letter Send On Your Mail Check data blelow </h3>
-    </div>
+
   </div>
 
-
-
   <div *ngIf="showme">
-
-
-
-    <div class="container">
-      <!-- *ngIf="customerdetails.customerVerificationStatus === 'Sanction_Genetrated'"> -->
-
-      <form [formGroup]="loginform" (ngSubmit)="login()">
-
-
+    <div class="container" class="box" *ngIf="
+        customerdetails.customerVerificationStatus === 'Sanction_Genetrated'
+      ">
+      <form [formGroup]="statusform" (ngSubmit)="status()">
+        <!-- <div class="form-group"> -->
         <div class="row">
           <div class="col-md-6">
             <label for="exampleInputEmail1" class="text-uppercase">Sanctioned Date :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.sanctionDate}}" aria-label="readonly input example"
-              readonly />
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.sanctionDate
+              }}" aria-label="readonly input example" readonly />
           </div>
 
           <div class="col-md-6">
-            <label for="eform-groupxampleInputPassword1" class="text-uppercase">Loan Offer : :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.loanAmountSanctioned}}"
-              aria-label="readonly input example" readonly />
+            <label for="exampleInputPassword1" class="text-uppercase">Name :</label>
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.applicantName
+              }}" aria-label="readonly input example" readonly />
           </div>
         </div>
 
-
         <div class="row">
+          <div class="col-md-6">
+            <label for="exampleInputPassword1" class="text-uppercase">Loan Amount :</label>
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.loanAmountSanctioned
+              }}" aria-label="readonly input example" readonly />
+          </div>
+
           <div class="col-md-6">
             <label for="exampleInputPassword1" class="text-uppercase">Interest Type :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.interestType}}" aria-label="readonly input example"
-              readonly />
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.interestType
+              }}" aria-label="readonly input example" readonly />
           </div>
+        </div>
 
-
+        <div class="row">
           <div class="col-md-6">
-
-
             <label for="exampleInputPassword1" class="text-uppercase">Rate of Interest :</label>
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.rateOfInterest
+              }}" aria-label="readonly input example" readonly />
+          </div>
+
+          <div class="col-md-6">
+            <label  class="text-uppercase">Tenure :</label>
             <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.rateOfInterest}}" aria-label="readonly input example"
+              formControlName="{{ customerdetails.sanctionLetter.loanTenure }}" aria-label="readonly input example"
               readonly />
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6">
-            <label for="exampleInputPassword1" class="text-uppercase">Tenure :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.loanTenure}}" aria-label="readonly input example"
-              readonly />
+            <label  class="text-uppercase">Emi :</label>
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.monthlyEmiAmount
+              }}" aria-label="readonly input example" readonly />
           </div>
 
           <div class="col-md-6">
-
-
-            <label for="exampleInputPassword1" class="text-uppercase">Emi :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.monthlyEmiAmount}}" aria-label="readonly input example"
-              readonly />
+            <label  class="text-uppercase">Amount to paid :</label>
+            <input type="text" class="form-control form-control-lg" formControlName="{{
+                customerdetails.sanctionLetter.loanAmountWithInterest
+              }}" aria-label="readonly input example" readonly />
           </div>
         </div>
 
+        
         <div class="row">
           <div class="col-md-6">
-            <label for="exampleInputPassword1" class="text-uppercase">Amount to paid :</label>
-            <input type="text" class="form-control form-control-lg"
-              formControlName="{{customerdetails.sanctionLetter.loanAmountWithInterest}}"
-              aria-label="readonly input example" readonly />
-
-
-          </div>
-        </div>
-      
-          <div class="can-toggle">
-            <input id="a" type="checkbox" checked data-size="large">
-            <label for="a">
-              <div class="can-toggle__switch" data-checked="Accept the Offer" data-unchecked="Reject the Offer"></div>
+            <label class="tacbox">
+              <input id="taccheck" type="checkbox" />
+              I agree to these
+              <a routerLink="termsAndCondition">Terms and Conditions</a>.
             </label>
-            
-  
-        </div>
+          </div>
 
-        
-        <label for="taccheck" class="tacbox">
-          <input id="taccheck" type="checkbox" />
-          I agree to these <a routerLink="termsAndCondition">Terms and Conditions</a>.
-        </label>
-
-        
-
-        <div class="row">
-          <div class="form-check">
-            <button type="submit" class="btn btn-login float-right">Login</button>
+          <div class="col-md-6">
+            <div class="can-toggle">
+              <input id="a" type="checkbox" />
+              <label for="a">
+                <div class="can-toggle__switch" data-checked="Accept the Offer" data-unchecked="Reject the Offer"></div>
+              </label>
+            </div>
           </div>
         </div>
 
+        <div class="form-check">
+          <button type="submit" class="btn btn-login float-right">
+            Submit
+          </button>
+          <!-- <button type="submit" class="btn btn-login float-right">Accept Offer</button> -->
+          <!-- <button type="submit" class="btn btn-login float-right">REject Offer</button> -->
+        </div>
       </form>
     </div>
-
   </div>
+</div>

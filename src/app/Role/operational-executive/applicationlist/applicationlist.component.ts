@@ -21,19 +21,19 @@ customerdatalist:Customer[]
 
 getAppliedList(){
   this.trigger=true
-  this.cs.customerEnquiries("Applied").subscribe((application:any)=>{
+  this.cs.getCustomer("Applied").subscribe((application:any)=>{
 this.customerdatalist=application.responceData
   })
 }
 
 verifiedApplication(){
-  this.cs.customerEnquiries("Verified").subscribe((application:any)=>{
+  this.cs.getCustomer("Verified").subscribe((application:any)=>{
     this.customerdatalist=application.responceData
   });
 }
 
 rejectedApplication(){
-  this.cs.customerEnquiries("Rejected").subscribe((application:any)=>{
+  this.cs.getCustomer("Rejected").subscribe((application:any)=>{
     this.customerdatalist=application.responceData
   });
 }

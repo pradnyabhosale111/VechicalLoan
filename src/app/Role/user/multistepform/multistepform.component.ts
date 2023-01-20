@@ -26,7 +26,6 @@ export class MultistepformComponent implements OnInit {
       customerLastName: this.fb.control('', Validators.required),
       customerDateOfBirth: this.fb.control('', Validators.required),
       customerGender: this.fb.control('', Validators.required),
-
       customerMobileNumber: this.fb.control(0, Validators.required),
       customerAdditionalMobileNumber: this.fb.control(0, Validators.required),
       customerEmail: this.fb.control('', Validators.required),
@@ -185,7 +184,7 @@ export class MultistepformComponent implements OnInit {
   }}
 
 
-  HandleSubmit() {
+  saveCustomer() {
     this.cs.customer.enquiryId =
       this.CustomerRegister.get('customerbasic').get('enquiryId').value;
     this.cs.customer.customerFirstName =
@@ -236,16 +235,17 @@ export class MultistepformComponent implements OnInit {
     this.cs.saveCustomer(data).subscribe();
     alert('saved');
 
-    // alert when form is submitted
+    //alert when form is submitted
     
-    // Swal.fire({
-    //   position: 'center',
-    //   icon: 'success',
-    //   title: 'Your Enquiry Form has been Submitted',
+    Swal.fire({
+      title: 'Congratulations!',
+      text: 'You are one step Closer for Getting Your Loan please Come Back Later to check the status of Your Application',
       
-    //   showConfirmButton: true,
-    //   timer: Infinity
-    // })
+      imageUrl: 'https://unsplash.it/400/200',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
 
   }
 }

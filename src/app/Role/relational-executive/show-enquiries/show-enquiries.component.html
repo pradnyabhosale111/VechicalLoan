@@ -11,21 +11,22 @@
 <table class="table">
     <thead class="heading">
       <tr>
-        <th>Action</th>
-        <th scope="col">enquiryId</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">MiddleName</th>
-        <th scope="col">LastName</th>
-        <th scope="col">DateOfBirth</th>
+        <th >Action</th>
+        <th scope="col">Enquiry Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Middle Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Date-Of-Birth</th>
         <th scope="col">Email id</th>
-        <th scope="col">MobileNumber</th>
-        <th scope="col">pancardNumber</th>
-        <th scope="col">enquiryStatus</th>  
-        <div *ngIf="showme">
-        <th  scope="col">cibil Score</th>
+        <th scope="col">Mobile Number</th>
+        <th scope="col">Pancard Number</th>
+        <th scope="col">Monthly Income</th>
+        <th scope="col">Enquiry Status</th>  
+        <div *ngIf="showme" >
+        <th  scope="col">Cibil Score</th>
         <th scope="col">Date</th>
         <th scope="col">Remark</th>
-        <th scope="col">Previous Emi</th>  
+        <th scope="col">Previous EMI</th>  
       </div>          
       </tr>
     </thead>
@@ -42,6 +43,7 @@
         <td>{{enquiry.customerEmail}}</td>
         <td>{{enquiry.customerMobileNumber}}</td>
         <td>{{enquiry.pancardNumber}}</td>
+        <td>{{enquiry.monthlyIncome}}</td>
         <td>{{enquiry.enquiryStatus}}</td>  
         <div *ngIf="showme">
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.cibilScore}}</td>

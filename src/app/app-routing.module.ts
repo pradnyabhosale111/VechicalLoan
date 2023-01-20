@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardcompComponent } from './Dashboard/dashboardcomp/dashboardcomp.component';
+import { AccountManagerModule } from './Role/account-manager/account-manager.module';
 import { CreditManagarModule } from './Role/credit-managar/credit-managar.module';
 import { OperationalExecutiveModule } from './Role/operational-executive/operational-executive.module';
 import { RelationalExecutiveModule } from './Role/relational-executive/relational-executive.module';
@@ -20,10 +21,7 @@ const routes: Routes = [
     },            
     {
       path: 'User', loadChildren: () => UserModule
-    },
-    {
-      path: 'Cmanager', loadChildren: () => CreditManagarModule
-    }
+    }    
   ]
 },
   { path: 'termsAndCondition',component:TearmsAndConditionComponent

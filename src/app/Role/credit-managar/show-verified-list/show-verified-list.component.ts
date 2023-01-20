@@ -11,6 +11,8 @@ import { CommonServiceService } from 'src/app/sharedService/common-service.servi
 })
 export class ShowVerifiedListComponent {
 
+  
+
   constructor(private router:Router,private cs :CommonServiceService){     
   }
 
@@ -35,7 +37,7 @@ export class ShowVerifiedListComponent {
     });
   }
 
-  sanctionGenetrated(){
+  sanctionGenerated(){
     this.cs.getCustomer("Sanction_Genetrated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
