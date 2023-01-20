@@ -1,23 +1,29 @@
 export class Menu {
 
-    
+
     public static menus: Array<any> = [
         {
+            User: [
+                { key: "applicationform", label: "Application form" },
+                { key: "statusshowform", label: "Check My Application" }
+            ],
             RExecutive: [
-            {key: "viewenquiries", label: "View Enquiery Details" }
-        ],
-         OExecutive:[
-            {key: "viewenquiries", label: "View Enquiery Details" }
-        ],
-        User:[
-            {key: "applicationform", label: "Application form" }
-        ]
+                { key: "viewenquiries", label: "View Enquiery Details" }
+            ],
+            OExecutive: [
+                { key: "vieweApplication", label: "View Enquiery Details" },
+                //   {key:"showApplication", label:"Check applicaton" }          
 
-      //   emp: [
-      //     {path: "empdash", title: "dashbord", icon: "pe-7s-graph", class: "" },
-      //     {path: "demo", title: "Demmmo", icon: "pe-7s-graph", class: "" }
-    
-      // ],
+            ],
+            Cmanager: [
+                { path: "showVerifiedList", label: "Show Application" },
+            ]
+            // Accmanager: [
+            //     { path: "showVerifiedList", label: "Show Application" },
+            // ]
+           
+
+            
         }
     ]
 }

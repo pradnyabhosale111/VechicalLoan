@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from '../defaultMod/navbar/navbar.component';
-import { DefautcomponentComponent } from '../defautcomponent/defautcomponent.component';
+import { DefautcomponentComponent } from './defautcomponent/defautcomponent.component';
 import { AboutUsComponent } from '../Navigationbar/about-us/about-us.component';
 import { EmiCalculatorComponent } from '../Navigationbar/emi-calculator/emi-calculator.component';
 import { FAQComponent } from '../Navigationbar/faq/faq.component';
