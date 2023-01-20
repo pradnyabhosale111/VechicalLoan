@@ -7,9 +7,16 @@ body {
 a {text-decoration: none;}
 
 .container {
-	margin-left: 500px;
+	// margin-left: 500px;
 	width: 100%;
 	align-content: flex-end;
+}
+label.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding:0 100px;
+    line-height: 80px;
 }
 
 ul {
@@ -62,3 +69,7 @@ nav > ul > li:hover > a {
 p{
 	font-style: italic;
 }
+body{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+   

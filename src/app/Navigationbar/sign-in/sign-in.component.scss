@@ -78,8 +78,22 @@ button:focus {
 }
 
 button.ghost {
-  background-color: transparent;
-  border-color: #ffffff;
+  justify-self: right;
+    font-size: 15px;
+    border: none;
+    background-color: #69c8f3c7;
+    height: 40px;
+    margin: 50px;
+    // background-color: #FFFFFF;
+    outline: none;
+    color: #0c0b0b;
+	
+    margin-top: 10px;
+    &:hover {
+        background-color: #080079;
+        cursor: pointer;
+        color: #ffffff;
+    };
 }
 
 form {
@@ -176,9 +190,8 @@ input {
 }
 
 .overlay {
-  background: #3d2385;
-  background: -webkit-linear-gradient(to right, #3d2385, #3d2385);
-  background: linear-gradient(to right, #3d2385, #3d2385);
+  background: #080079;
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

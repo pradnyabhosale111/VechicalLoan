@@ -11,18 +11,6 @@ export class Menu {
                 { key: "viewenquiries", label: "View Enquiery Details" }
             ],
             OExecutive: [
-<<<<<<< HEAD
-                { key: "vieweApplication", label: "View Enquiery Details" },
-                //   {key:"showApplication", label:"Check applicaton" }          
-
-            ],
-            Cmanager: [
-                { path: "showVerifiedList", label: "Show Application" },
-            ]
-            // Accmanager: [
-            //     { path: "showVerifiedList", label: "Show Application" },
-            // ]
-=======
                 { key: "vieweApplication", label: "View Enquiery Details" },                
 
             ],
@@ -36,7 +24,6 @@ export class Menu {
         //    admin:[
 
         //    ]
->>>>>>> 0f7ec5f354cf6ad508dbc511f8210684feffa0c8
            
 
             
