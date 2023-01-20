@@ -10,7 +10,6 @@
 `
 <table class="table">
     <thead class="heading">
-
       <tr>
         <th>Action</th>
         <th scope="col">enquiryId</th>
@@ -21,19 +20,21 @@
         <th scope="col">Email id</th>
         <th scope="col">MobileNumber</th>
         <th scope="col">pancardNumber</th>
-        <th scope="col">enquiryStatus</th>        
+        <th scope="col">MonthlyIncome</th>
+        <th scope="col">enquiryStatus</th>  
+        <div *ngIf="showme">
         <th  scope="col">cibil Score</th>
         <th scope="col">Date</th>
         <th scope="col">Remark</th>
-        <th scope="col">Previous Emi</th>      
+        <th scope="col">Previous Emi</th>  
+      </div>          
       </tr>
     </thead>
-
-      <!-- cibidata:Cibil;    -->
+    <tbody>
       <tr *ngFor="let enquiry of enquirylist">
-        <td *ngIf="enquiry.enquiryStatus === 'Enquired'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(enquiry)">CheckCibil</button></td>  
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(enquiry)">SendMail</button></td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(enquiry)">SendMail</button></td>          
+        <td *ngIf="enquiry.enquiryStatus === 'Enquired'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="cibilScoreCheck(enquiry)">CheckCibil</button></td>  
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="sendMail(enquiry)">SendMail</button></td>
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="sendMail(enquiry)">SendMail</button></td>          
         <td>{{enquiry.enquiryId}}</td>
         <td>{{enquiry.customerFirstName}}</td>
         <td>{{enquiry.customerMiddleName}}</td>
@@ -42,7 +43,9 @@
         <td>{{enquiry.customerEmail}}</td>
         <td>{{enquiry.customerMobileNumber}}</td>
         <td>{{enquiry.pancardNumber}}</td>
-        <td>{{enquiry.enquiryStatus}}</td>           
+        <td>{{enquiry.monthlyIncome}}</td>
+        <td>{{enquiry.enquiryStatus}}</td>  
+        <div *ngIf="showme">
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.cibilScore}}</td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.cibilGeneratedDate}}</td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilok'">{{enquiry.cibilData.remark}}</td>
@@ -52,27 +55,8 @@
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.remark}}</td>
         <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'">{{enquiry.cibilData.previousEmi}}</td>       
         <td>
+        </div>     
         </tr>
-          <!--
-            <div *ngIf="enquiry.enquiryStatus === 'Enquired'">        
-            <button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(item)">CheckCibil</button>
-          </div>
-          <div *ngIf="enquiry.enquiryStatus === 'cibilok'">        
-        <button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(item)">SendMail</button>
-          </div>
-          <div *ngIf="enquiry.enquiryStatus === 'cibilreject'">        
-        <button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(item)">SendMail</button>
-          </div>
-          </td> -->
-         
-           
-        
-      
-    
-    <tbody>
-      <tr >
-       
-      </tr>
     </tbody>
   </table>
   

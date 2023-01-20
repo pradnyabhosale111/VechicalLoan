@@ -1,4 +1,4 @@
-<form [formGroup]="CustomerRegister" (ngSubmit)="HandleSubmit()">
+<form [formGroup]="CustomerRegister" (ngSubmit)="saveCustomer()">
   <mat-stepper [linear]="isLinear"  #stepper labelPosition="bottom">
     <mat-step [stepControl]="customerbasicform">
 
@@ -13,7 +13,8 @@
         <mat-form-field appearance="outline">     
           <mat-label>First Name</mat-label>     
           <input matInput formControlName="customerFirstName" required />
-        </mat-form-field>    
+        </mat-form-field>  
+        
           
           <mat-form-field appearance="outline">
             <mat-label>Middle Name</mat-label>
@@ -31,7 +32,7 @@
           <input type="date" matInput formControlName="customerDateOfBirth" required />
         </mat-form-field>
 
-        
+        <!-- radio button adding here  -->
         <mat-form-field appearance="outline">
           <mat-label>Gender</mat-label>          
           <input matInput formControlName="customerGender" required />
@@ -153,8 +154,7 @@
         <div>
           <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
           <button mat-raised-button color="accent" matStepperNext type="button">Next</button>
-          <!-- <button (click)="goBack(stepper)" type="button">Back</button>  |
-          <button (click)="goForward(stepper)" type="button">Next</button> -->
+         
       </div>
       </div>
     </mat-step>

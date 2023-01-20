@@ -21,16 +21,27 @@ customerdatalist:Customer[]
 
 getAppliedList(){
   this.trigger=true
-  this.cs.getApplicationList("Applied").subscribe((application:any)=>{
+  this.cs.getCustomer("Applied").subscribe((application:any)=>{
 this.customerdatalist=application.responceData
   })
+}
+
+verifiedApplication(){
+  this.cs.getCustomer("Verified").subscribe((application:any)=>{
+    this.customerdatalist=application.responceData
+  });
+}
+
+rejectedApplication(){
+  this.cs.getCustomer("Rejected").subscribe((application:any)=>{
+    this.customerdatalist=application.responceData
+  });
 }
 
 
 showApplicationData(customerApplication:any){
 alert("showApplicationData method")
-    // now we convert the the object in the String before transfer by routing 
-    
+    // now we convert the the object in the String before transfer by routing    
      
     //now we pass this object through the router url 
     //way 1 not working :

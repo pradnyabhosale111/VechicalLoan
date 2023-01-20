@@ -54,7 +54,21 @@ export class SignInComponent {
       alert('welcome RExecutive');
       localStorage.setItem('role', 'RExecutive');
       this.router.navigateByUrl('dashboardlayout/RExecutive');
-    } else {
+    } else if (
+      this.loginf.get('customerEmail').value === 'cm' &&
+      this.loginf.get('customerPassword').value === 'cm123'
+    ) {
+      alert('welcome Credit Manager');
+      localStorage.setItem('role', 'Cmanager');
+      this.router.navigateByUrl('dashboardlayout/Cmanager');
+  } else if (
+    this.loginf.get('customerEmail').value === 'ac' &&
+    this.loginf.get('customerPassword').value === 'ac123'
+  ) {
+    alert('welcome Account Manager');
+    localStorage.setItem('role', 'acManager');
+    this.router.navigateByUrl('dashboardlayout/acManager');
+} else {
       alert('invalid credetials ...!!!!');
     }
   }

@@ -12,28 +12,47 @@ export class ShowEnquiriesComponent {
 constructor(private cs:CommonServiceService){}
 
 public enquirylist:any[]
+showme=false;
 
- pendingEnquiries(){
-  
+
+ pendingEnquiries(){  
   this.cs.customerEnquiries("Enquired").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
   })
+  this.showme=false;
  }
 
- validcibilEnquiries(){
+ validcibilEnquiries(){  
   this.cs.customerEnquiries("Cibilok").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
+    this.showme=true;
   })
  }
 
  rejectcibilEnquiries(){
-  this.cs.customerEnquiries("CibilReject").subscribe((response:any)=>{
+  this.cs.customerEnquiries("Cibilreject").subscribe((response:any)=>{
     this.enquirylist=response.responceData;
+    this.showme=true;
   })
  }
 
   
+ cibilScoreCheck(enquiryDetails: EnquiryDetails){
+this.cs.cibilScoreCheck(enquiryDetails).subscribe(()=>{
 
+window.location.reload();
+
+});
+ }
+
+ sendMail(enquiryDetails: EnquiryDetails){
+  this.cs.sendMail(enquiryDetails).subscribe(()=>{
+    // mail sent msg 
+  }
+
+  );
+  window.location.reload();
+ }
 
 
 

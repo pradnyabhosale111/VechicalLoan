@@ -26,7 +26,6 @@ export class MultistepformComponent implements OnInit {
       customerLastName: this.fb.control('', Validators.required),
       customerDateOfBirth: this.fb.control('', Validators.required),
       customerGender: this.fb.control('', Validators.required),
-
       customerMobileNumber: this.fb.control(0, Validators.required),
       customerAdditionalMobileNumber: this.fb.control(0, Validators.required),
       customerEmail: this.fb.control('', Validators.required),
@@ -139,6 +138,14 @@ export class MultistepformComponent implements OnInit {
   }
 
 
+  // onselectfile1(event) {
+  //   this.pancard = event.target.files[0]
+  //   var reader= new FileReader()        // this for preview the file 
+  //   reader.readAsDataURL(event.target.files[0]);
+  //   reader.onload=(event:any)=>{
+  //     this.pancardurl=event.target.result;
+  // }}
+
   onselectfile1(event) {
     this.pancard = event.target.files[0]
     var reader= new FileReader()        // this for preview the file 
@@ -146,6 +153,7 @@ export class MultistepformComponent implements OnInit {
     reader.onload=(event:any)=>{
       this.pancardurl=event.target.result;
   }}
+  
   onselectfile2(event) {
     this.adharcard = event.target.files[0];
     var reader= new FileReader()        // this for preview the file 
@@ -176,7 +184,7 @@ export class MultistepformComponent implements OnInit {
   }}
 
 
-  HandleSubmit() {
+  saveCustomer() {
     this.cs.customer.enquiryId =
       this.CustomerRegister.get('customerbasic').get('enquiryId').value;
     this.cs.customer.customerFirstName =

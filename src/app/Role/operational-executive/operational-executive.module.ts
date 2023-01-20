@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ApplicationlistComponent } from '../Oecomp/applicationlist/applicationlist.component';
-import { SingleappliactionComponent } from '../Oecomp/singleappliaction/singleappliaction.component';
+import { ApplicationlistComponent } from './applicationlist/applicationlist.component';
+import { SingleappliactionComponent } from './singleappliaction/singleappliaction.component';
+
 
 
  export const oerouting: Routes = [
