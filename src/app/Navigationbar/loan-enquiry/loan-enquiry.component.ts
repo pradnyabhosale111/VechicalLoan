@@ -46,7 +46,7 @@ export class LoanEnquiryComponent
       title: 'Your Enquiry Form has been Submitted',
       
       showConfirmButton: true,
-      timer: 20
+      timer: 1500
       
     })
 
