@@ -140,13 +140,15 @@ public customer:Customer={
     // save loan disbursement secondary by AM 
     loandisbursement(customerId:string) {
       alert("loandisbursement letter")
-      return this.http.post("http://localhost:9090/GCappps/loandisburse",customerId);
+      
+      return this.http.get("http://localhost:9090/GCappps/loandisburse/"+customerId);
+      
       }
 
     // loan disbursement
-      ledgerGenration(loanDisbursementStatus:String,customerId:string) {
-        alert("loandisbursement letter")
-        return this.http.post("http://localhost:9090/GCappps/ledgerGenration/"+customerId,loanDisbursementStatus);
+      ledgerGenration(customerId:string) {
+        alert("ledgergenarte letter")
+        return this.http.get("http://localhost:9090/GCappps/generateledger/"+customerId);
         }
  
       

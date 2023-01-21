@@ -28,7 +28,10 @@ const routes: Routes = [
     },
     {
       path:'interestRate', component:InterestRateComponent
-    }
+    },
+    {
+      path:'home',component:HomeComComponent     
+    },  
   ]
   
   

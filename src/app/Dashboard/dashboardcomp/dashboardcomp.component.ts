@@ -40,4 +40,10 @@ export class DashboardcompComponent {
     });
 
 
+  logout(){
+    localStorage.setItem('role', '');
+    this.router.navigateByUrl('home'); 
+
+  }
+
 }
