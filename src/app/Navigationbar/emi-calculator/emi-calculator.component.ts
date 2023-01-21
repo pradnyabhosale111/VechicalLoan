@@ -85,9 +85,7 @@ export class EmiCalculatorComponent {
     
     @ViewChild("chart") chart: ChartComponent;
     public chartOptions: Partial<ChartOptions>;
-    loanenq(){
-      this.router.navigateByUrl('loanEnquiry');
-    }
+    
   }
   
 
