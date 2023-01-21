@@ -38,6 +38,6 @@ export class DashboardcompComponent {
         this.sidenav.open();
       }
     });
-  }
+
 
 }
