@@ -24,8 +24,7 @@ const routes: Routes = [
     },
       {path:'signIN',component:SignInComponent
     }, 
-    {
-      path:'faq', component:FAQComponent
+    {path:'faq', component:FAQComponent
     },
     {
       path:'interestRate', component:InterestRateComponent
