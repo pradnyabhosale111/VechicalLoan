@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import {
   ApexNonAxisChartSeries,
   ApexResponsive,
@@ -22,9 +22,8 @@ export type ChartOptions = {
 })
 export class EmiCalculatorComponent {
   
-  
 
-  constructor(private router: Router) {
+  constructor(private router:Router) {
     
   }
 
