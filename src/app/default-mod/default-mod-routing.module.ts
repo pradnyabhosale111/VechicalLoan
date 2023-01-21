@@ -14,7 +14,7 @@ const routes: Routes = [
    path:'',component:DefautcomponentComponent,
    children:[
     {
-      path:'home',component:HomeComComponent     
+      path:'',component:HomeComComponent     
     },      
       {path:'emiCalculator',component:EmiCalculatorComponent
     },

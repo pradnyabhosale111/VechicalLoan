@@ -20,6 +20,7 @@ export class LedgerdataComponent {
       this.customerdatalist=application.responceData
     });
   }
+  
   ledgerGenratedList(){
     this.cs.getCustomer("Ledger_Genrated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData

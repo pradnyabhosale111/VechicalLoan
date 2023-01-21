@@ -15,6 +15,20 @@ export class MultistepformComponent implements OnInit {
 
   public isLinear = true;
 
+  customerbasic = false;
+  customerAddress = false;
+  customerFinancialData = false;
+  dealerData = false;
+  guarantorDetails = false;
+  customerDocuments = false;
+    step = 1;
+
+    
+
+
+
+
+
   ngOnInit(): void {}
 
   CustomerRegister = this.fb.group({
