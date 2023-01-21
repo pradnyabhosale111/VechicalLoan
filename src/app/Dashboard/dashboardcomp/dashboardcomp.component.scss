@@ -42,11 +42,13 @@ mat-toolbar {
       margin-left: 0;
       // display: flex;
       padding-left: 0;
+  
       padding-right: 0;
-      font-size: 0.8rem;
-      text-decoration: none;
-      color: white;
+      font-size: 0.9rem;
+    border-radius: none;
+      color:#69c8f3c7;
       background-color: #69c8f3c7;
+      border-color: #69c8f3c7;
   
     mat-icon {
       margin-left: 8px;
@@ -80,11 +82,13 @@ mat-toolbar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+   
   }
   
   .name {
     margin-top: 8px;
     font-weight: normal;
+    color: #080079;
   }
   
   .designation {
@@ -97,11 +101,12 @@ mat-toolbar {
   mat-divider {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   ul > li {
     text-decoration: none;
+  
   }
 
 
