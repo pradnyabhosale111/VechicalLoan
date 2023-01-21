@@ -7,15 +7,17 @@ body {
 a {text-decoration: none;}
 
 .container {
-	// margin-left: 500px;
+	
 	width: 100%;
 	align-content: flex-end;
 }
 label.logo{
     font-size: 30px;
     font-weight: bold;
-    color: white;
-    padding:0 100px;
+    color: rgb(252, 4, 4);
+    padding:0 80px;
+	
+	border-radius: 100px;
     line-height: 80px;
 }
 
@@ -30,7 +32,7 @@ ul {
 nav {
 	background: #080079;
 	font-size: 25px;
-	position: relative;
+	// position: relative;
 	
     
 }
@@ -53,7 +55,7 @@ nav > ul > li > a {
     transition: all .3s ease;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-	
+//	text-transform: uppercase;
 
   }
 nav > ul > li:hover > a {
@@ -61,7 +63,7 @@ nav > ul > li:hover > a {
   	border-bottom: 3px solid#69c8f3c7;
 	
 	&:hover {
-    color:  #69c8f3c7;
+    color:  #ff0000;
         cursor: pointer;
     
     };
