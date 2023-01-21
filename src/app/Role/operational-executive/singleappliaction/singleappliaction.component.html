@@ -201,324 +201,359 @@ x<section class="h-100 h-custom gradient-custom-2">
                     </div>
                   </div>
 
-                  <!----Documents      -------------------------------------------------------------------------------------------------------------------->
-                  <h3 class="fw-normal mb-5" style="color: #4835d4">
-                    Documents Submitted
-                  </h3>
+<!-- ------------------------------------------->
+
+                  <h3 class="fw-normal mb-5" style="color: #4835d4;">Documents Submitted</h3>
+
                   
-                 
-                  <div>
-                    <label class="form-label" for="form3Examplev3">1.Pancard</label>
-                    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.pancard" height="70">
-                    
-                  </div>
-                  <div>
-                    <label class="form-label" for="form3Examplev3">2.AdharCard</label>
-                    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.adharcard" height="70">
-                    
-                  </div>
-                  <div>
-                    <label class="form-label" for="form3Examplev3">3.Photo</label>
-                    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.photo" height="70">
-                    
-                  </div>
-                  <div>
-                    <label class="form-label" for="form3Examplev3">4.Signature</label>
-                    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.signature" height="70">
-                 
-                  </div>
-                  <div>
-                    <label class="form-label" for="form3Examplev3">5.Income Statement</label>
-                    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.incomeStatement" height="70">
-                  
+
+
+
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-label" for="form3Examplev3">1.Pancard</label>
+                      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.pancard" height="200">
+                      
+                      </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-label" for="form3Examplev3">2.AadharCard</label>
+                      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.adharcard" height="200">
+                      
+                    </div>
                   </div>
 
-                  <!-- ----------------------------------------PART 2---------------------------------------------------------------------------------- -->
-                  <!--------------------------------------------------------------------------------------------------------------------------------->
+            
+
                   <div class="row">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0"></div>
-                    <div class="col-md-6"></div>
-                  </div>
+                    <div class="col-md-1">
+                      <label class="form-label" for="form3Examplev3">5.IncomeStatemnt</label>
+                      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.incomeStatement"
+                        height="200">
+                      
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-6 bg-indigo text-white">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-5" style="color: #4835d4">
-                    Financial Information
-                  </h3>
 
-                  <div class="row">
-                    <div class="col-md-6 mb-4 pb-2">
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+
+
+
+
+
+                      <!-- ----------------------------------------PART 2---------------------------------------------------------------------------------- -->
+                      <!--------------------------------------------------------------------------------------------------------------------------------->
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0"></div>
+                        <div class="col-md-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 bg-indigo text-white">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5" style="color: #4835d4">
+                        Financial Information
+                      </h3>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.ocupationType
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">Occupation Type</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev2" style="color: black">Occupation Type</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.monthlyIncome
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">Monthly Income</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev2" style="color: black">Monthly Income</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData
                               .customerTotalLoanRequired
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">Loan Required</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev2" style="color: black">Loan Required</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.bankName
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">Bank Name</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev2" style="color: black">Bank Name</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.ifscCode
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
-                      </div>
-                      <br />
-                      <br />
-                      <br />
-                      <br />
+                            <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
+                          </div>
+                          <br />
+                          <br />
+                          <br />
+                          <br />
 
-                      <br />
+                          <br />
 
-                      <div class="col-md-6 mb-4 pb-2"></div>
-                    </div>
-                    <div class="col-md-6 mb-4 pb-2">
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                          <div class="col-md-6 mb-4 pb-2"></div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.designation
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev3" style="color: black">Designation</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev3" style="color: black">Designation</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData.employerName
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev3" style="color: black">Employer Name</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev3" style="color: black">Employer Name</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData
                               .customerAccountNumber
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev3" style="color: black">Account Number</label>
-                      </div>
+                            <label class="form-label" for="form3Examplev3" style="color: black">Account Number</label>
+                          </div>
 
-                      <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                          <div class="form-outline">
+                            <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                             customerdetails.customerFinancialData
                               .accountHolderName
                           }}" aria-label="readonly input example" readonly />
-                        <label class="form-label" for="form3Examplev3" style="color: black">Account Holder Name</label>
-                      </div>
-                    </div>
+                            <label class="form-label" for="form3Examplev3" style="color: black">Account Holder
+                              Name</label>
+                          </div>
+                        </div>
 
-                    <!-- -----------------------------------------------------LOCAL ADDRESS------------------------------------------------------- -->
+                        <!-- -----------------------------------------------------LOCAL ADDRESS------------------------------------------------------- -->
 
-                    <h3 class="fw-normal mb-5" style="color: #4835d4">
-                      Local Address
-                    </h3>
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                        <h3 class="fw-normal mb-5" style="color: #4835d4">
+                          Local Address
+                        </h3>
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localHouseNumber
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">House Number</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">House Number</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localStreetName
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">Street Name</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">Street Name</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localDistrict
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">District Name</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">District Name</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="number" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localPincode
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">Pincode</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">Pincode</label>
+                            </div>
 
-                        <div class="col-md-6 mb-4 pb-2"></div>
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="col-md-6 mb-4 pb-2"></div>
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localAreaName
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Area Name</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev3" style="color: black">Area Name</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localCityName
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">City Name</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev3" style="color: black">City Name</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.customerAddress.localState
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">State Name</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- -------------------------------------------------------------------------------------------------------------------------- -->
-
-                    <!------------------------------------------Dealer Information--------------------------------------------------------------------------->
-
-                    <h3 class="fw-normal mb-5" style="color: #4835d4">
-                      Dealer Information
-                    </h3>
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg"
-                            value="{{ customerdetails.dealerData.dealerName }}" aria-label="readonly input example"
-                            readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">Dealer Name</label>
+                              <label class="form-label" for="form3Examplev3" style="color: black">State Name</label>
+                            </div>
+                          </div>
                         </div>
 
-                        <div class="form-outline">
-                          <input type="email" id="form3Examplev2" class="form-control form-control-lg"
-                            value="{{ customerdetails.dealerData.dealerEmail }}" aria-label="readonly input example"
-                            readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">Email Id</label>
-                        </div>
+                        <!-- -------------------------------------------------------------------------------------------------------------------------- -->
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                        <!------------------------------------------Dealer Information--------------------------------------------------------------------------->
+
+                        <h3 class="fw-normal mb-5" style="color: #4835d4">
+                          Dealer Information
+                        </h3>
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg"
+                                value="{{ customerdetails.dealerData.dealerName }}" aria-label="readonly input example"
+                                readonly />
+                              <label class="form-label" for="form3Examplev2" style="color: black">Dealer Name</label>
+                            </div>
+
+                            <div class="form-outline">
+                              <input type="email" id="form3Examplev2" class="form-control form-control-lg"
+                                value="{{ customerdetails.dealerData.dealerEmail }}" aria-label="readonly input example"
+                                readonly />
+                              <label class="form-label" for="form3Examplev2" style="color: black">Email Id</label>
+                            </div>
+
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.accountIFSCCode
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">IFSC Code</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.vehicleModel
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev2" style="color: black">Vehicle Model</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev2" style="color: black">Vehicle Model</label>
+                            </div>
 
-                        <div class="col-md-6 mb-4 pb-2"></div>
-                      </div>
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="col-md-6 mb-4 pb-2"></div>
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.dealerLocation
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Loaction</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev3" style="color: black">Loaction</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.accountNumber
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">
-                            Dealer Account Number</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev3" style="color: black">
+                                Dealer Account Number</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.vehicleCompanyName
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Vehicle Company
-                            Name</label>
-                        </div>
+                              <label class="form-label" for="form3Examplev3" style="color: black">Vehicle Company
+                                Name</label>
+                            </div>
 
-                        <div class="form-outline">
-                          <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
+                            <div class="form-outline">
+                              <input type="number" id="form3Examplev3" class="form-control form-control-lg" value="{{
                               customerdetails.dealerData.vehiclePrice
                             }}" aria-label="readonly input example" readonly />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Vehicle price</label>
+                              <label class="form-label" for="form3Examplev3" style="color: black">Vehicle price</label>
+                            </div>
+
+
+                            <div class="row">
+                              <label class="form-label" for="form3Examplev3">3.Photo</label>
+                              <div class="col-md-1">
+                                
+                                <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.photo" height="200">                                
+                              </div>
+                              </div>
+          
+                              <div class="row">
+                                <label class="form-label" for="form3Examplev3">4.Signature</label>
+                              <div class="col-md-1">                                
+                                
+                                <img [src]="'data:image/jpeg;base64,'+customerdetails.customerDocuments.signature" height="200">
+                                
+                              </div>
+                            </div>
+
+                            <!---------------------------------------------------------------------Application Status------------------------------------------>
+                         
+                            <div class="row">
+                              <div class="col-md-24">
+                              <input type="button" class="buttonclass1" value="Application Verify"
+                                (click)="applicationVerify(customerdetails.customerId)">
+                              </div>
+                              </div>
+                              <div class="row">
+                              <div class="col-md-24">
+                              <input type="button" class="buttonclass1" value="Application Reject"
+                                (click)="applicationReject(customerdetails.customerId)">
+                              </div>
+                            </div>
+                            
+
+
+
+
+                            <!---------------------------------------------------------------------------------------------------------------->
+                          </div>
                         </div>
-
                         <!---------------------------------------------------------------------Application Status------------------------------------------>
-                        <div class="form-outline">
-                          <input type="number" id="form3Examplev3" class="form-control form-control-lg" />
-                          <label class="form-label" for="form3Examplev3" style="color: black">Application Status</label>                      
-                        
-                        <input type="button"  class="buttonclass1" value="Application Verify" (click)="applicationVerify(customerdetails.customerId)">   
-                        <input type="button" class="buttonclass1" value="Application Reject" (click)="applicationReject(customerdetails.customerId)">  
-                      </div>
-
-
-
-
                         <!---------------------------------------------------------------------------------------------------------------->
                       </div>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white"></div>
+                      </div>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white"></div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+                          <div class="form-outline form-white"></div>
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+                          <div class="form-outline form-white"></div>
+                        </div>
+                      </div>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white"></div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+                          <div class="form-outline form-white"></div>
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+                          <div class="form-outline form-white"></div>
+                        </div>
+                      </div>
+
+                      <div class="mb-4">
+                        <div class="form-outline form-white"></div>
+                      </div>
+
+
+                      <div class="form-check d-flex justify-content-start mb-4 pb-3"></div>
                     </div>
-                    <!---------------------------------------------------------------------Application Status------------------------------------------>
-                    <!---------------------------------------------------------------------------------------------------------------->
                   </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white"></div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white"></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-                      <div class="form-outline form-white"></div>
-                    </div>
-                    <div class="col-md-7 mb-4 pb-2">
-                      <div class="form-outline form-white"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white"></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-                      <div class="form-outline form-white"></div>
-                    </div>
-                    <div class="col-md-7 mb-4 pb-2">
-                      <div class="form-outline form-white"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="form-outline form-white"></div>
-                  </div>
-
-
-                  <div class="form-check d-flex justify-content-start mb-4 pb-3"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+        </div>
+      
 </section>
 
 <!--  
