@@ -44,30 +44,31 @@ showme=false;
  cibilScoreCheck(enquiryDetails: EnquiryDetails){
 this.cs.cibilScoreCheck(enquiryDetails).subscribe((response:any)=>{
   this.enquiry=response.responceData
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Cibil status for '+this.enquiry.enquiryId+'  is '+this.enquiry.enquiryStatus,
+    showConfirmButton: true,
+    timer: 5000,
+  })
 });
-Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Cibil Score for '+this.enquiry.enquiryId+' is '+this.enquiry.cibildata.cibilScore+' and status is '+this.enquiry.enquiryStatus,
-  showConfirmButton: true,
-  timer: 20000,
-})
+
 //window.location.reload();
  }
 
  sendMail(enquiryDetails: EnquiryDetails){
   this.cs.sendMail(enquiryDetails).subscribe((response:any)=>{
-    
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Mail Sent To '+this.enquiry.customerFirstName+' on '+this.enquiry.customerEmail+' Regarding application',
+      showConfirmButton: true,
+      timer: 5000,
+    })
   });
   
 
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Mail Sent To '+this.enquiry.customerFirstName+' on '+this.enquiry.customerEmail+' Regarding application',
-    showConfirmButton: true,
-    timer: 20000,
-  })
+ 
  // window.location.reload();
  }
 

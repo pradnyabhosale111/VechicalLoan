@@ -28,7 +28,7 @@
     
     <ul>        
         <li routerLinkActive="active" *ngFor="let item of menuItems[0][userRole]">
-            <button mat-button class="menu-button" aria-label="Example icon button with a home icon"  class="nav-link" [routerLink]="[userRole,item.key]"><mat-icon>home</mat-icon> {{item.label}}</button>       
+            <button mat-button class="menu-button"   class="nav-link" [routerLink]="[userRole,item.key]"> {{item.label}}</button>       
         <mat-divider></mat-divider>
     </li>
          

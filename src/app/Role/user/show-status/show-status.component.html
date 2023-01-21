@@ -21,13 +21,23 @@
             "Document is Verified and Application is in Further Process"
           </h3>
           <h3 *ngIf="customerdetails.customerVerificationStatus === 'Rejected'" class="Rejected">
-            "Sorry Your Appliction is Rejected at Document Verfication Contact Out Near Branch"
+            "Sorry Your Appliction is Rejected at Document Verfication Contact Our Near Branch"
           </h3>
           <h3 *ngIf="
               customerdetails.customerVerificationStatus === 'Sanction_Genetrated'
             " class="sanctioned">
             "Sanction Letter Sent On Your Mail For Accepting Offer Check Below"
           </h3>
+          <h3 *ngIf="
+              customerdetails.customerVerificationStatus === 'Customer_Accepted'
+            " class="sanctioned">
+            "You already accepted our Offer"
+          </h3>
+          <h3 *ngIf="
+          customerdetails.customerVerificationStatus === 'Customer_Rejected'
+        " class="sanctioned" class="Rejected">
+        "You already Rejected our Offer"
+      </h3>
         </div>
         </div>
     </form>

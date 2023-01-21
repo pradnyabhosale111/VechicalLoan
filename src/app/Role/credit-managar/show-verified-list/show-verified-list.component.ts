@@ -11,7 +11,7 @@ import { CommonServiceService } from 'src/app/sharedService/common-service.servi
 })
 export class ShowVerifiedListComponent {
 
-  
+  showme=false;
 
   constructor(private router:Router,private cs :CommonServiceService){     
   }
@@ -24,36 +24,42 @@ export class ShowVerifiedListComponent {
     this.cs.getCustomer("Verified").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
+    this.showme=true;
   }
 
   customerAccepted(){
     this.cs.getCustomer("Customer_Accepted").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
+    this.showme=false;
   }
   customerRejected(){
-    this.cs.getCustomer("Customer_Rejeceted").subscribe((application:any)=>{
+    this.cs.getCustomer("Customer_Rejected").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
+    this.showme=false;
   }
 
   sanctionGenerated(){
     this.cs.getCustomer("Sanction_Genetrated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
+    this.showme=false;
   }
 
   LoanDisbursed(){
     this.cs.getCustomer("Loan_Disbursed").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
+    this.showme=false;
   }
 
     // santion generation reouting done here 
     generateSanction(customerdata:Customer){
       this.router.navigate(['./dashboardlayout/Cmanager/sanctionGeneration'],{
        queryParams:{ data:JSON.stringify(customerdata)}
-      })
+      });
+      this.showme=false;
     }
 
   }

@@ -34,7 +34,7 @@
       <td>{{singlecustomer.ledger.defaulterCount}}</td>  
       <td>{{singlecustomer.ledger.loanEndDate}}</td>  
       <td>{{singlecustomer.ledger.loanStatus}}</td>
-      <td *ngIf="enquiry.enquiryStatus === 'Ledger_Genrated'"><button type="button" class="buttonclass3"   (click)="CheckInstallMent(singlecustomer.customerId)">Check Application</button></td>
+      <td *ngIf="singlecustomer.customerVerificationStatus === 'Ledger_Generated'"><button type="button" class="buttonclass3"   (click)="CheckInstallMent(singlecustomer)">Check Installment</button></td>
       
   </tbody> 
   </table>

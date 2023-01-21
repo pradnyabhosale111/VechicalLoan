@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from 'src/app/Model/customer';
 import { CommonServiceService } from 'src/app/sharedService/common-service.service';
 
@@ -11,9 +12,7 @@ export class LedgerdataComponent {
 
   customerdatalist:Customer
 
-  constructor(private cs:CommonServiceService){
-
-  }
+  constructor(private cs:CommonServiceService,private router:Router){}
 
   loanDisburseList(){
     this.cs.getCustomer("Loan_Disbursed").subscribe((application:any)=>{
@@ -22,7 +21,7 @@ export class LedgerdataComponent {
   }
 
   ledgerGenratedList(){
-    this.cs.getCustomer("Ledger_Genrated").subscribe((application:any)=>{
+    this.cs.getCustomer("Ledger_Generated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
     });
   }
@@ -34,6 +33,12 @@ export class LedgerdataComponent {
   }
 
 
+
+  CheckInstallMent(singlecustomer:Customer){
+    this.router.navigate(['./dashboardlayout/acManager/installmentData'],{
+      queryParams:{data:JSON.stringify(singlecustomer)}
+      })
+  }
   
 
 

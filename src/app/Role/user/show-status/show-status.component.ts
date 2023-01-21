@@ -63,11 +63,13 @@ this.customerInfo=this.fb.group({
       
        
        acceptOffer(customerid:string){
-        this.cs.withstatusUpdate(customerid,"Customer_Accepted").subscribe();          
+        this.cs.withstatusUpdate(customerid,"Customer_Accepted").subscribe();  
+        window.location.reload()        
        }
        
        rejectOffer(customerid:string){
         this.cs.withstatusUpdate(customerid,"Customer_Rejected").subscribe();
+        window.location.reload()
           
        }
 

@@ -61,3 +61,24 @@
     };
       }
 
+      
+  .buttonclass3 {
+    justify-self: right;
+    font-size: 14px;
+    border: none;
+    background-color: #69c8f3c7;
+    height: 40px;
+    // margin: 30px;
+    // background-color: #FFFFFF;
+    outline: none;
+    width: 100%;
+    color: #0c0b0b;
+    border-radius: 18px;
+    // margin-top: 10px;
+    &:hover {
+        background-color: #080079;
+        cursor: pointer;
+        color: #ffffff;
+    };
+  }
+

@@ -28,7 +28,7 @@ constructor(private cs:CommonServiceService){
         });
       }
       ledgerGenratedList(){
-        this.cs.getCustomer("Ledger_Genrated").subscribe((application:any)=>{
+        this.cs.getCustomer("Ledger_Generated").subscribe((application:any)=>{
           this.customerdatalist=application.responceData
         });
       }
