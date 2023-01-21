@@ -34,14 +34,14 @@ export class EmiCalculatorComponent {
     tenure: number;
     interest: number;
     emi: number;
-  
+    intresttemp:number;
    
     totalInterestCost: number;
     totalRepayment: number;
   
     public cal() {      
+      this.interest = this.intresttemp / (12 * 100);
       
-      this.interest = this.interest / (12 * 100);
       this.emi =
         (this.loanAmount *
           this.interest *
@@ -49,6 +49,7 @@ export class EmiCalculatorComponent {
         (Math.pow(1 + this.interest, this.tenure) - 1);
       this.totalRepayment = this.emi * this.tenure;
       this.totalInterestCost = this.totalRepayment-this.loanAmount;
+      
 
       this.chartOptions = {
         series: [this.loanAmount,  this.totalInterestCost],
