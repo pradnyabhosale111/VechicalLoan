@@ -96,7 +96,7 @@ public customer:Customer={
 
   // Depend on cibil mail is send to Customer 
   sendMail(enquiryDetails: EnquiryDetails){
-    return this.http.post("http://localhost:9090/GCappps/sendmail",enquiryDetails)
+    return this.http.post("http://localhost:9090/GCappps/cibilstatus",enquiryDetails)
   }
 
 
@@ -110,8 +110,8 @@ public customer:Customer={
   }
 
   // single data for customer to track their application 
-  getSingleCustomer(customerId:number){
-    return this.http.get("http://localhost:9090/GCappps/getSingleCustomer/"+customerId);
+  getSingleCustomer(customerId:string){
+    return this.http.get("http://localhost:9090/GCappps/getcustomerbyid/"+customerId);
   }
 
    //-------------------------------------------------------- OE call ----------------------------------------------------
@@ -138,14 +138,15 @@ public customer:Customer={
   //-------------------------------------------------------- AM call ----------------------------------------------------
 
     // save loan disbursement secondary by AM 
-    loandisbursement(loanDisbursementStatus:String,customerId:string) {
+    loandisbursement(customerId:string) {
       alert("loandisbursement letter")
-      return this.http.post("http://localhost:9090/GCappps/loandisburse/"+customerId,loanDisbursementStatus);
+      return this.http.post("http://localhost:9090/GCappps/loandisburse",customerId);
       }
 
+    // loan disbursement
       ledgerGenration(loanDisbursementStatus:String,customerId:string) {
         alert("loandisbursement letter")
-        return this.http.post("http://localhost:9090/GCappps/loandisburse/"+customerId,loanDisbursementStatus);
+        return this.http.post("http://localhost:9090/GCappps/ledgerGenration/"+customerId,loanDisbursementStatus);
         }
  
       

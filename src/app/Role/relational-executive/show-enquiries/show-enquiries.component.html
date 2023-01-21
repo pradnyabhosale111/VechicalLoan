@@ -32,9 +32,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let enquiry of enquirylist">
-        <td *ngIf="enquiry.enquiryStatus === 'Enquired'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="cibilScoreCheck(enquiry)">CheckCibil</button></td>  
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="sendMail(enquiry)">SendMail</button></td>
-        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'"><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="sendMail(enquiry)">SendMail</button></td>          
+        <td *ngIf="enquiry.enquiryStatus === 'Enquired'"><button type="button" class="buttonclass3"  (click)="cibilScoreCheck(enquiry)">CheckCibil</button></td>  
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilok'"><button type="button" class="buttonclass3"  (click)="sendMail(enquiry)">SendMail</button></td>
+        <td *ngIf="enquiry.enquiryStatus === 'Cibilreject'"><button type="button" class="buttonclass3"  (click)="sendMail(enquiry)">SendMail</button></td>          
         <td>{{enquiry.enquiryId}}</td>
         <td>{{enquiry.customerFirstName}}</td>
         <td>{{enquiry.customerMiddleName}}</td>

@@ -15,7 +15,8 @@ export class ShowStatusComponent
 
   constructor(public cs:CommonServiceService, public fb:FormBuilder){}
 
-  customerdetails:Customer;
+  public customerdetails:Customer;
+
   sanctionLetterForm: FormGroup;
   customerInfo: FormGroup;
   showme=false;
@@ -30,21 +31,21 @@ this.customerInfo=this.fb.group({
 })
 
 
-     this.sanctionLetterForm= this.fb.group({
-      sanctionId:[],
-      sanctionDate:['', [Validators.required]],
-      applicantName:['', [Validators.required]],
-      loanAmountSanctioned:['', [Validators.required]],
-      interestType:['', [Validators.required]],
-      rateOfInterest:['', [Validators.required]],
-      loanTenure:['', [Validators.required]],
-      monthlyEmiAmount:['', [Validators.required]],
-      loanAmountWithInterest:['', [Validators.required]],      
-      //null
-      sanctionLetterStatus:[]
+    //  this.sanctionLetterForm= this.fb.group({
+    //   sanctionId:[],
+    //   sanctionDate:[],
+    //   applicantName:['', [Validators.required]],
+    //   loanAmountSanctioned:['', [Validators.required]],
+    //   interestType:['', [Validators.required]],
+    //   rateOfInterest:['', [Validators.required]],
+    //   loanTenure:['', [Validators.required]],
+    //   monthlyEmiAmount:['', [Validators.required]],
+    //   loanAmountWithInterest:['', [Validators.required]],      
+    //   //null
+    //   sanctionLetterStatus:[]
 
 
-      });
+    //   });
     }
 
     //customer get thier status on basics of id 
@@ -52,45 +53,52 @@ this.customerInfo=this.fb.group({
    {
       alert("getSingleCustomer")
       this.cs.getSingleCustomer(this.customerInfo.get('customerId').value).subscribe((response:any)=>{
-        this.customerdetails=response.responceData
+        this.customerdetails=response.responceData;
       });
-      if(this.customerdetails.customerVerificationStatus = null)  {        
-      this.showme=false;       
-       } else{
+      // if(this.customerdetails.customerVerificationStatus === undefined) {        
+      // this.showme=false;       
+      //  } else{
         this.showme=true; 
        }
       
-    
-   }
+       
+       acceptOffer(customerid:string){
+        this.cs.withstatusUpdate(customerid,"Customer_Accepted").subscribe();          
+       }
+       
+       rejectOffer(customerid:string){
+        this.cs.withstatusUpdate(customerid,"Customer_Rejected").subscribe();
+          
+       }
 
    
 
-    get sanctionDate(){
-      return this.sanctionLetterForm.get('sanctionDate');
-    }
-    get applicantName(){
-      return this.sanctionLetterForm.get('applicantName');
-    }
-    get loanAmountSanctioned(){
-      return this.sanctionLetterForm.get('loanAmountSanctioned');
-    }
-    get interestType(){
-      return this.sanctionLetterForm.get('interestType');
-    }
-    get rateOfInterest(){
-      return this.sanctionLetterForm.get('rateOfInterest');
-    }
-    get loanTenure(){
-      return this.sanctionLetterForm.get('loanTenure');
-    }
-    get monthlyEmiAmount(){
-      return this.sanctionLetterForm.get('monthlyEmiAmount');
-    }
-    get loanAmountWithInterest(){
-      return this.sanctionLetterForm.get('loanAmountWithInterest');
-    }
-    get modeOfPayment(){
-      return this.sanctionLetterForm.get('modeOfPayment');
-    }
+    // get sanctionDate(){
+    //   return this.sanctionLetterForm.get('sanctionDate');
+    // }
+    // get applicantName(){
+    //   return this.sanctionLetterForm.get('applicantName');
+    // }
+    // get loanAmountSanctioned(){
+    //   return this.sanctionLetterForm.get('loanAmountSanctioned');
+    // }
+    // get interestType(){
+    //   return this.sanctionLetterForm.get('interestType');
+    // }
+    // get rateOfInterest(){
+    //   return this.sanctionLetterForm.get('rateOfInterest');
+    // }
+    // get loanTenure(){
+    //   return this.sanctionLetterForm.get('loanTenure');
+    // }
+    // get monthlyEmiAmount(){
+    //   return this.sanctionLetterForm.get('monthlyEmiAmount');
+    // }
+    // get loanAmountWithInterest(){
+    //   return this.sanctionLetterForm.get('loanAmountWithInterest');
+    // }
+    // get modeOfPayment(){
+    //   return this.sanctionLetterForm.get('modeOfPayment');
+    // }
 
 }
