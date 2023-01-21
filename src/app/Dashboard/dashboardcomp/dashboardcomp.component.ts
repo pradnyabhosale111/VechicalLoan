@@ -38,7 +38,7 @@ export class DashboardcompComponent {
         this.sidenav.open();
       }
     });
-
+  }
 
   logout(){
     localStorage.setItem('role', '');
