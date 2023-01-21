@@ -50,9 +50,9 @@ Swal.fire({
   icon: 'success',
   title: 'Cibil Score for '+this.enquiry.enquiryId+' is '+this.enquiry.cibildata.cibilScore+' and status is '+this.enquiry.enquiryStatus,
   showConfirmButton: true,
-  timer: 15000
+  timer: 20000,
 })
-window.location.reload();
+//window.location.reload();
  }
 
  sendMail(enquiryDetails: EnquiryDetails){
@@ -66,9 +66,9 @@ window.location.reload();
     icon: 'success',
     title: 'Mail Sent To '+this.enquiry.customerFirstName+' on '+this.enquiry.customerEmail+' Regarding application',
     showConfirmButton: true,
-    timer: 15000
+    timer: 20000,
   })
-  window.location.reload();
+ // window.location.reload();
  }
 
 

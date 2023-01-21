@@ -21,6 +21,7 @@ constructor(private cs:CommonServiceService){
       this.customerdatalist=application.responceData
     });
   }     
+
       loanDisburseList(){
         this.cs.getCustomer("Loan_Disbursed").subscribe((application:any)=>{
           this.customerdatalist=application.responceData
@@ -40,7 +41,7 @@ constructor(private cs:CommonServiceService){
 
 
       loandisbursement(customerId:string){
-            this.cs.loandisbursement(customerId,"Loan_Disbursed").subscribe((response:any)=>{
+            this.cs.loandisbursement(customerId).subscribe((response:any)=>{
         });
       }
 

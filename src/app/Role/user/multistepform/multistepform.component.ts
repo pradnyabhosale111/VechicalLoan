@@ -29,7 +29,7 @@ export class MultistepformComponent implements OnInit {
       customerMobileNumber: this.fb.control(0, Validators.required),
       customerAdditionalMobileNumber: this.fb.control(0, Validators.required),
       customerEmail: this.fb.control('', Validators.required),
-      //customerVerificationStatus: this.fb.control(''),// field goes null
+      customerVerificationStatus: this.fb.control(''),// field goes null
     }),
 
     //form 2
@@ -40,16 +40,18 @@ export class MultistepformComponent implements OnInit {
       localStreetName: this.fb.control('', Validators.required),
       localCityName: this.fb.control('', Validators.required),
       localDistrict: this.fb.control('', Validators.required),
-      localPincode: this.fb.control(0, Validators.required),
       localState: this.fb.control('', Validators.required),
+      localPincode: this.fb.control(0, Validators.required),
+      
 
       permanentHouseNumber: this.fb.control(0, Validators.required),
       permanentAreaName: this.fb.control('', Validators.required),
       permanentStreetName: this.fb.control('', Validators.required),
       permanentCityName: this.fb.control('', Validators.required),
       permanentDistrict: this.fb.control('', Validators.required),
-      permanentPincode: this.fb.control(0, Validators.required),
       permanentState: this.fb.control('', Validators.required),
+      permanentPincode: this.fb.control(0, Validators.required),
+      
     }),
     //form 3
     customerFinancialData: this.fb.group({
