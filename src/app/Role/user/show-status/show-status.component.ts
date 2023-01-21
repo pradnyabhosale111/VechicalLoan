@@ -16,6 +16,7 @@ export class ShowStatusComponent
   constructor(public cs:CommonServiceService, public fb:FormBuilder){}
 
   public customerdetails:Customer;
+
   sanctionLetterForm: FormGroup;
   customerInfo: FormGroup;
   showme=false;
@@ -54,14 +55,21 @@ this.customerInfo=this.fb.group({
       this.cs.getSingleCustomer(this.customerInfo.get('customerId').value).subscribe((response:any)=>{
         this.customerdetails=response.responceData;
       });
-      if(this.customerdetails.customerVerificationStatus === undefined) {        
-      this.showme=false;       
-       } else{
+      // if(this.customerdetails.customerVerificationStatus === undefined) {        
+      // this.showme=false;       
+      //  } else{
         this.showme=true; 
        }
       
-    
-   }
+       
+       acceptOffer(customerid:string){
+        this.cs.withstatusUpdate(customerid,"Customer_Accepted").subscribe();          
+       }
+       
+       rejectOffer(customerid:string){
+        this.cs.withstatusUpdate(customerid,"Customer_Rejected").subscribe();
+          
+       }
 
    
 

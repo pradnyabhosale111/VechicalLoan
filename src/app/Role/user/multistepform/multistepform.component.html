@@ -1,5 +1,5 @@
-<form [formGroup]="CustomerRegister" (ngSubmit)="saveCustomer()">
-  <mat-stepper [linear]="isLinear"  #stepper labelPosition="bottom">
+<form [formGroup]="CustomerRegister">
+  <mat-stepper [linear]="isLinear"   labelPosition="bottom">
     <mat-step [stepControl]="customerbasicform">
 
       <div formGroupName="customerbasic">
@@ -28,10 +28,6 @@
           <input matInput formControlName="customerLastName" required />
         </mat-form-field>
 
-        <!-- <mat-form-field appearance="outline">  
-          <mat-label>Date of Birth</mat-label>        
-          <input type="date" matInput formControlName="customerDateOfBirth" required />
-        </mat-form-field> -->
         <mat-form-field appearance="outline">
           <mat-label>Date of Birth</mat-label>
           <input matInput [matDatepicker]="picker"  formControlName="customerDateOfBirth" required >
@@ -343,12 +339,12 @@
       <div formGroupName="customerDocuments">
         <ng-template matStepLabel>Required Documents</ng-template>
 
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="exampleInputName">PanCard</label>
           <input type="file" (change)="onselectfile1($event)"><img [src]="pancardurl" height="70">
         </div>
 
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="exampleInputName">AadharCard</label>
           <input type="file" class="file-input" (change)="onselectfile2($event)" #fileUpload><img [src]="adharcardurl" height="70">
         </div>
@@ -408,36 +404,33 @@
           {{ this.CustomerRegister.value.customerbasic.customerEmail }}</mat-list-item>
         <mat-list-item>
           <ng-template matStepLabel>Local Address Details :</ng-template>
-          <strong>First Name:</strong>
-          {{ this.CustomerRegister.value.customerAddress.localHouseNumber }}</mat-list-item>
-        <h3>Local Address Details</h3>
-        <mat-list-item>
-          <strong>First Name:</strong>
+          <h3>Local Address Details</h3>
+          <strong>Hose NO:</strong>     
           {{ this.CustomerRegister.value.customerAddress.localHouseNumber }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>localAreaName :</strong>
           {{ this.CustomerRegister.value.customerAddress.localAreaName }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>localStreetName :</strong>
           {{ this.CustomerRegister.value.customerAddress.localStreetName }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>local CityName :</strong>
           {{ this.CustomerRegister.value.customerAddress.localCityName }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>localDistrict Name:</strong>
           {{ this.CustomerRegister.value.customerAddress.localDistrict }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>localPincode :</strong>
           {{ this.CustomerRegister.value.customerAddress.localPincode }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>localState Name:</strong>
           {{ this.CustomerRegister.value.customerAddress.localState }}</mat-list-item>
         <h3>Permanent address Details</h3>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>permanentHouseNumber:</strong>
           {{ this.CustomerRegister.value.customerAddress.permanentHouseNumber }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>permanentAreaName :</strong>
           {{ this.CustomerRegister.value.customerAddress.permanentAreaName }}</mat-list-item>
         <mat-list-item>
           <strong>First Name:</strong>
@@ -449,19 +442,19 @@
           <strong>First Name:</strong>
           {{ this.CustomerRegister.value.customerAddress.permanentDistrict }}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>Pincode:</strong>
           {{this.CustomerRegister.value.customerAddress.permanentPincode}}</mat-list-item>
         <mat-list-item>
-          <strong>First Name:</strong>
+          <strong>State:</strong>
           {{ this.CustomerRegister.value.customerAddress.permanentState }}</mat-list-item>
       </mat-list>
       <br /><br /><br />
       <div>
-        <button mat-raised-button color="primary" matStepperPrevious>
+        <button mat-raised-button color="primary" matStepperPrevious type="button">
           Back
         </button>
         |
-        <button mat-raised-button color="accent" matStepperNext type="button">Submit</button>
+        <input (click)="saveCustomer()"type="submit" name="submit" class="submit action-button" value="Submit"/>
       </div>
     </mat-step>
   </mat-stepper>
