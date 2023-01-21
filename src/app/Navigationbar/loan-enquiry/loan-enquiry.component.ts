@@ -31,15 +31,11 @@ export class LoanEnquiryComponent
       //below data is null
       enquiryStatus:[''],
       cibilData:[]
-       })
-
-
-       
+       }) 
     }
 
-
-
   customerEnquiry(){
+    
       this.cs.enquiryDetails=this.enquiryForm.value
     this.cs.customerEnquiry(this.cs.enquiryDetails).subscribe(); 
    
