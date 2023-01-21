@@ -39,14 +39,13 @@ constructor(private cs:CommonServiceService){
         });
       }
 
-
       loandisbursement(customerId:string){
             this.cs.loandisbursement(customerId).subscribe((response:any)=>{
         });
       }
 
       ledgerGenration(customerId:string){
-        this.cs.ledgerGenration("Ledger_Generated",customerId).subscribe((response:any)=>{
+        this.cs.ledgerGenration(customerId).subscribe((response:any)=>{
     });
     }
 

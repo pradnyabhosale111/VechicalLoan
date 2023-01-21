@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   ApexNonAxisChartSeries,
   ApexResponsive,
@@ -21,8 +22,9 @@ export type ChartOptions = {
 })
 export class EmiCalculatorComponent {
   
+  
 
-  constructor() {
+  constructor(private router: Router) {
     
   }
 
@@ -76,6 +78,10 @@ export class EmiCalculatorComponent {
   
     reset() {
       window.location.reload();
+    }
+
+    loanenq(){
+      this.router.navigateByUrl('loanEnquiry');
     }
     
     @ViewChild("chart") chart: ChartComponent;
