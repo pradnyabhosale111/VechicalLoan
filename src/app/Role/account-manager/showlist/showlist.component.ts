@@ -45,5 +45,10 @@ constructor(private cs:CommonServiceService){
         });
       }
 
+      ledgerGenration(customerId:string){
+        this.cs.ledgerGenration("Ledger_Generated",customerId).subscribe((response:any)=>{
+    });
+    }
+
 
 }

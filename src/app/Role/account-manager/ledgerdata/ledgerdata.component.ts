@@ -20,7 +20,7 @@ export class LedgerdataComponent {
       this.customerdatalist=application.responceData
     });
   }
-  
+
   ledgerGenratedList(){
     this.cs.getCustomer("Ledger_Genrated").subscribe((application:any)=>{
       this.customerdatalist=application.responceData
@@ -34,9 +34,8 @@ export class LedgerdataComponent {
   }
 
 
-  loandisbursement(customerId:string){
-    this.cs.ledgerGenration(customerId,"Ledger_Generated").subscribe((response:any)=>{
-});
-}
+  
+
+
 
 }
